@@ -18,9 +18,8 @@ As frontend "Ubidots for Education" is used!
 ### Purpose
 Knowing the activity though CO2 bubble measurements over time including the start of decline, we can better foresee when the SG is close to FG, and better make decision on dry-hopping, temperature changes, etc.! 
 
-
  <p align="center">
-  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/into.png">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/into.png">
 </p>
 See full brew here --> https://app.ubidots.com/ubi/public/getdashboard/page/34PfeVSlCYvi_2V9wT3byvlC1h0
 
@@ -57,7 +56,7 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is on Pin D5/Pin14 and Relay on D7/Pin 13. "activity-LED" is on D6/pin 12. I have isolated the Sound sensor 3.3v + GRD from he other parts to lower any interference, not sure if needed, but please consider it! Info, the long leg of LED is normally the positive (some recommend to have a resistor included to prolong life of LED, hence, please consider it). ***Note!*** Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside!
  
  <p align="center">
-  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/diagram.png">
+  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram.png">
 </p>
  
 ## Setup
@@ -91,19 +90,19 @@ Please ntoice the Punctuation Marks (") and where they are not, as this is impor
 The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the following till Ubidots "temp", "settemp", "SBM", and the current "SBM_sum" of SBM. Further it push a calculated "SG" estimated by the initial "OG" and "brew size" you stated under settings, and it is utterly important it is entered correct for the script to work!
 
  <p align="center">
-  <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/you%20brew.png">
+  <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/you%20brew.png">
 </p>
 
 Based on the data you can create a Dashboard and graphs where you have max. 500 datapoints, hence, you needs to under device create "Rolling Windows" where you make an average calculation every 30min (~10days) or 60 min (20 days). To do so, select "Rolling Windows/YOUR Brew/SG or SBM/Average " type in 30 mins and select your "Start date+time".
 
  <p align="center">
-  <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/avg.png">
+  <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/avg.png">
 </p>
 
 To have Temperature control, you need to add to Dashboard (where you most likely also wish to add the above average SBM and SG as a graph), a "Control/Slider/Settemp" widget of the range of your chosen temperature range (10-30C)! It should be noted the script do not support values below 1´C and turn over to a backup system if values below 1 is set. This is to secure the temperature system don’t go down if connection till "Ubidots Education" is lost (if no connection a value of 0 or below is read and posted by the logger/Ubidtos).
 
  <p align="center">
-  <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/settemp_control.png">
+  <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/settemp_control.png">
 </p>
 
 ## Calibration 
@@ -136,13 +135,13 @@ void loop() {
 3. Adjust the potentiometer of LM393 until it just turns (and only just) from rubish numbers of a mix of "58, 64 or xx" and shows a steady "1024" on the serial monitor(9600)!
 
  <p align="center">
-  <img width="556" height="276" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/Calibration.png">
+  <img width="556" height="276" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/Calibration.png">
 </p>
 
 4. DONE! This give you a calibrated LM393 (and mine look like this):
 
 <p align="center">
-  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/sensors.png">
+  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sensors.png">
 </p>
 
 This give a high resolution sensor there miss a few and also post some double bubbles. This calibration should give you between 80 and up till 200 SBM at high krausen (maybe a bit more) depending on temperature/yeast/brew, etc! This setting is prone to sounds,  but light talking, music, drier and washing machine is ok to have nearby! 
@@ -157,7 +156,7 @@ If you do not wish to make use of SG estimation and soly use it as activity logg
 The LM393 need a mosture protection, and this is done by a small water balloon, and it should be loose in the noose. If it dosent sit tight in airlock depending on size, make it fit (rubberband?), so it is fitted stable. It should not be pushed thight all the way down to bottom as this will make a kind of sealing, and hence, restict the CO2 in getting out and foremsot restict the bubble sound! So when you press on tank/blow-out you should hear a normal "blop"!
 
  <p align="center">
-  <img width="446" height="556" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/condom_LM393.jpg">
+  <img width="446" height="556" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/condom_LM393.jpg">
 </p>
 
 ### Calibration of ds18b20 temperature probe
@@ -168,7 +167,7 @@ You might need to do your own SBM/L vs. hydrometer measurements to get good SG e
 
 If you should wish to update the polynomial base on above unknown factors, you will need to model a 3rd degree (or 2nd) polynomial based on Sound-Bubbles-Min/Liter (SBM/L) towards the reduction in SG from your hydrometer reading during a brew! I use the following 3rd degree polynomial for the SG estimation!
  <p align="center">
-  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-logger-/blob/master/pic/poly.png">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/poly.png">
 </p>
 As it can be seen from the above picture showing data from 2 different settings of the LM393´s pontimeter, even a small difference from the calibration method of "1024", it do have a high impact of the needed SMB/L for the same reduction of SG. 
 
