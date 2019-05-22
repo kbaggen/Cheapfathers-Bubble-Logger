@@ -163,6 +163,7 @@ The LM393 need a mosture protection, and this is done by a small water balloon, 
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
 
 ### Calibration of the polynomial
+**Please Notice, the below is still work in prrogress**
 You might need to do your own SBM/L vs. hydrometer measurements to get good SG estimations as it is unclear to me how much tank seize, temperature, different LM393 and variations in airlocks all play together even taken the above calibration procedure into account and the amount of 4 ml in airlock! 
 
 If you should wish to update the polynomial base on above unknown factors, you will need to model a 3rd degree (or 2nd) polynomial based on Sound-Bubbles-Min/Liter (SBM/L) towards the reduction in SG from your hydrometer reading during a brew! I use the following 3rd degree polynomial for the SG estimation!
