@@ -25,7 +25,7 @@
 char my_polynominal[100] = "(-0.0000000000005*sum^3)-(0.00000008*sum^2)+(0.0046*sum)+1";  // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
-#define DEVICE  "YOUR brew-TEST"                                                                 // Name of brew, whatever
+#define DEVICE  "YOUR BREW"                                                                 // Name of brew, whatever
 double START_TEMP = 19;                                                                     // Start temperature
 double brewsize = 20;                                                                       // The sieze of you brew in liters
 double OG = 1060;                                                                           // Your start gravity, OG                                               
