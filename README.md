@@ -2,7 +2,7 @@
 A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (EXP8266). The sound detection is turned into Sound-Bubbles-Min (SBM) pr. Liter brew (SBM/L) there can be correlated with gravity (SG) though hydrometer measurements and finally give an indication/estimation of SG.
 **WORK in Progress - The use of polynomial to predicts the SG needs verification in detail. Hence, to be tested over the next months by 2-3 brews**
 
-Facebook grup:
+Facebook group:
 https://www.facebook.com/groups/2176394599141882/
 
 ### Introduction
