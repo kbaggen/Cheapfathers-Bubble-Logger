@@ -33,7 +33,7 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 
 ### Important!
 * Airtight - For CO2 to be measured the fermenter needs to be airtight! Hence, FORGET you buckets! You need sealed AIRTHIGHT tanks to do this!
-* Sound detecting is prone to sound, hence, best placed in fridge especially if no interference is seen from your fridge! *Pleast Notice, use in fridge is not fully tested yet (Interference)!
+* Sound detecting is prone to sound, hence, best placed in fridge especially if no interference is seen from your fridge! *Please Notice, the use in fridge is not fully tested yet (Interference)!*
 * Sound sensor is prone to moisture, needs a "condom" (small water balloon)!
 * A airtight Blow-off system is needed as else krausen-yeast-particles from blow-off will set-off the measurements! Or, you might get away with a high headspace of 33% together with a low temperature and hence a slow fermentation.
 * This equipment do make use of Arduino IDE, and hence, you need to be familiar with Arduino IDE or willing to learn!!!
