@@ -176,6 +176,6 @@ If you should wish to update the polynomial base on above unknown factors, you w
 </p>
 As it can be seen from the above picture showing data from 2 different settings of the LM393´s pontimeter, even a small difference from the calibration method of "1024", it do have a high impact of the needed SMB/L for the same reduction of SG. 
 
-The used polynoium inbuild in the script is curreently the "Blue Line"! The blue line is also the least sensitive sensor, and hence easier to work with in regards of sideby "niose". 
+The used polynoium inbuild in the script is curreently the "Blue Line"! The blue line is also the least sensitive setting for the sensor, and hence easier to work with in regards of sideby "niose". 
 
 The data I collected is at (excel) link: https://1drv.ms/x/s!An5QQQ1io7W7iPwHmv-1I0dIkRlGiw
