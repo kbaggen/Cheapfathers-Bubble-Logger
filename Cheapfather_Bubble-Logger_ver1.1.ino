@@ -23,7 +23,7 @@
 #define TOKEN  "YOUR TOKEN"                                         // Put here your Ubidots TOKEN  
 #define WIFISSID "YOUR SSID"                                                        // Put here your Wi-Fi SSID                     
 #define PASSWORD "PASSword"                                                                // Put here your Wi-Fi password                            
-char my_polynominal[100] = "(-0.0000000000005*sum^3)-(0.00000008*sum^2)+(0.0046*sum)+1";  // Inset your polnominal if calibrated, sum = SBM/L
+char my_polynominal[100] = "(0.0000000000004*sum^3)-(0.0000001*sum^2)+(0.0049*sum)+0.33";  // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
 #define DEVICE  "YOUR BREW"                                                                 // Name of brew, whatever
