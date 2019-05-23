@@ -10,7 +10,7 @@ This project measure:
 1. the Sound-bubbles as CO2 escape the fermenter by a digital Sound Sensor Detecting Module LM393
 2. Temperature by ds18b20 and offset correction!
 3. One channel Relay to control a heat source! 
-4. A polonium is used to calculated an estimated/indicative SG (+/- 3 SG).
+4. A polonium is used to calculated an estimated/indicative SG (+/- 3 SG is the aim).
 
 Hence, we simply make use of the "Big Blops" coming from airlock during fermentation. Ever tried to put you ear near to the airlock? You be surprised how loud the sound is and this is what we measure!
 
@@ -96,7 +96,7 @@ The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the fo
   <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/you%20brew.png">
 </p>
 
-Based on the data you can create a Dashboard and graphs where you have max. 500 datapoints, hence, you needs to under device create "Rolling Windows" where you make an average calculation every 30min (~10days) or 60 min (20 days). To do so, select "Rolling Windows/YOUR Brew/SG or SBM/Average " type in 30 mins and select your "Start date+time".
+Based on the data you can create a Dashboard and graphs where you have max. 500 datapoints, hence, you needs to under device create "Rolling Windows" where you make an average calculation every 60 min (the 500 datapoints equalls 18-20 days). To do so, select "Rolling Windows/YOUR Brew/SG or SBM/Average " type in 30 mins and select your "Start date+time".
 
  <p align="center">
   <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/avg.png">
