@@ -3,7 +3,8 @@
 //..................................................................................
 //         "Cheapfather´s Bubble-Logger!"                                                                     
 //         Script by www.Cheapfather.com, Klaus Bagge Nielsen                       
-//         Email: klaus"a"bagge-nielsen.dk, April 2019.                                                                  
+//         Email: klaus"a"bagge-nielsen.dk, April 2019.
+//         WWW.cheapfather.dk or www.posebryg.dk
 //
 //         Detection of Sound-Bubbles, Gravity calculation, Temperature,
 //         + setpoint temperature control of Relay with Fallback (hence, if Ubidots
