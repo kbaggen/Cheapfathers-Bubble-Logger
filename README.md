@@ -77,7 +77,7 @@ The settings you need to update is the following:
 #define TOKEN  "YOUR Ubidots token"                                         // Put here your Ubidots TOKEN  
 #define WIFISSID "YOUR wifi"                                                        // Put here your Wi-Fi SSID                     
 #define PASSWORD "YOUR pass"                                                                // Put here your Wi-Fi password                            
-char my_polynominal[100] = "(0.000000000002*sum^3)-(0.0000001*sum^2)+(0.0041*sum)+0.6645";  // Inset your polynomial if calibrated, sum = SBM/L
+char my_polynominal[100] = "(0.0000000000004*sum^3)-(0.0000001*sum^2)+(0.0049*sum)+0.33";  // Inset your polynomial if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
 #define DEVICE  "YOUR name"                                                                    // Name of brew, whatever
