@@ -159,7 +159,7 @@ If you do not wish to make use of SG estimation and soly use it as activity logg
 *Please notice, the use in fridge is currently not fully tested (interference), but seems to work with a few miss-reading here and there depending on the age of the fridge and hence it level of interference!*
 
 ### Fitting the Condom - Water Balloon on the LM393 - fitting in Airlock
-The LM393 need a mosture protection, and this is done by a small water balloon, and it should be loose in the noose. If it dosent sit tight in airlock depending on size, make it fit (rubberband?), so it is fitted stable. It should not be pushed thight all the way down to bottom as this will make a kind of sealing, and hence, restict the CO2 in getting out and foremsot restict the bubble sound! So when you press on tank/blow-out you should hear a normal "blop"!
+The LM393 need a mosture protection, and this is done by a small water balloon, and it should be tight around the noose. If it dosent sit tight in airlock depending on size, make it fit (rubberband?), so it is fitted stable. Pushed it thight all the way down to bottom as this will make a kind of sealing. This restict the CO2 in getting out so to let the CO2 out please  drill a small hole in the airlock! 
 
  <p align="center">
   <img width="446" height="556" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/condom_LM393.jpg">
