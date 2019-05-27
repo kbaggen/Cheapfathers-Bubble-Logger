@@ -163,7 +163,7 @@ The LM393 need a mosture protection, and this is done by a small water balloon, 
  <p align="center">
   <img width="446" height="256" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sensor_3pic.png">
  </p>
-
+As the sensor got some shapes edges there will flence the ballon and secondly as the mirc rather easily can break off, try steady the sensor by some tape as first picture shows!
 
 ### Calibration of ds18b20 temperature probe
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
