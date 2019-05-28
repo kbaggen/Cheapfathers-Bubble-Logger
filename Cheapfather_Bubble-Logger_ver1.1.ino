@@ -23,16 +23,12 @@
 #define TOKEN  "YOUR TOKEN"                                         // Put here your Ubidots TOKEN  
 #define WIFISSID "YOUR SSID"                                                        // Put here your Wi-Fi SSID                     
 #define PASSWORD "PASSword"                                                                // Put here your Wi-Fi password                            
-char my_polynominal[100] = "(0.0000000000004*sum^3)-(0.0000001*sum^2)+(0.0049*sum)+0.33";  // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
 #define DEVICE  "YOUR BREW"                                                                 // Name of brew, whatever
-double START_TEMP = 19;                                                                     // Start temperature
-double brewsize = 20;                                                                       // The sieze of you brew in liters
-double OG = 1060;                                                                           // Your start gravity, OG                                               
+double START_TEMP = 19;                                                                     // Start temperature                                             
 //...................................................................................
 
-#include <tinyexpr.h>
 #include <DallasTemperature.h>
 #include <OneWire.h>
 #include "UbidotsMicroESP8266.h"
@@ -127,33 +123,11 @@ void loop(void) {
             double temp;
             temp = temp_ds18b20 - TEMP_OFFSET; 
       
-      // calculate Gravity(SG)
- 
-            float gravity = 0;
-              int err;
-              double _sum = (SBM_sum/brewsize);
-              te_variable vars[] = {{"sum", &_sum}};
-    
-              te_expr *expr = te_compile(my_polynominal, vars, 1, &err);
-    
-            if (expr)
-              {
-               gravity = te_eval(expr);
-               te_free(expr);
-               
-              }
-            else
-             {
-             Serial.printf("Parse error at %d\n", err);
-             }
 
-             double SG;
-             SG = (OG-gravity);
 
             
          // printing data serial   
-            Serial.print("  SG = ");
-            Serial.print(SG);
+
             Serial.print("  ");
             Serial.print("  Temp = ");
             Serial.print(temp);
@@ -214,14 +188,14 @@ void loop(void) {
               client.add("SBM", SBM);
               client.add("SBM_sum", SBM_sum);
               client.add("settemp", temp_set_for_relay);
-              client.add("SG", SG);
+
               client.sendAll(true);
       
       // Reset, timer, bubbles, bubble sum, gravity 
               timer = 0;
               bubbleCount = 0;
               SBM = 0;
-              gravity = 0;
+
 
                                            
    }
