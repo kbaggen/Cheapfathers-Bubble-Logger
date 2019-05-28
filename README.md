@@ -1,5 +1,5 @@
 # Cheapfathers-Bubble-logger!
-A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (EXP8266). 
+A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). 
 Facebook group:
 https://www.facebook.com/groups/2176394599141882/
 
