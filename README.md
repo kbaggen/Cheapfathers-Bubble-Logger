@@ -17,11 +17,13 @@ As frontend "Ubidots for Education" is used!
 Knowing the activity though CO2 bubble measurements over time including the start of decline, we can better foresee when the SG is close to FG, and better make decision on dry-hopping, temperature changes, etc.! 
 
  <p align="center">
-  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/into.png">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/intro.png">
 </p>
-See full brew here --> https://app.ubidots.com/ubi/public/getdashboard/page/34PfeVSlCYvi_2V9wT3byvlC1h0
+See full brew here --> https://app.ubidots.com/ubi/public/getdashboard/page/oryUSQPFTyZBZYJ23le4xzNlOtk
 
-Other brew: https://app.ubidots.com/ubi/public/getdashboard/page/oryUSQPFTyZBZYJ23le4xzNlOtk
+Other brew(S): 
+https://app.ubidots.com/ubi/public/getdashboard/page/oryUSQPFTyZBZYJ23le4xzNlOtk
+https://app.ubidots.com/ubi/public/getdashboard/page/34PfeVSlCYvi_2V9wT3byvlC1h0
 
 ### Project outcome 
 Hence, the goal is to have a temperature logger/controller, one tiny device to take care of measurement of fermentation rate, e.g. showing Acivity as CO2 "Sound-bubbles pr Minute" (SBM) and a same time control the temperature at one setpoint! The idea is to get one device instead of having both a temperature controller and fermentation-rate logger at a very low price, e.g. 10$ or EUR! Secondly, the idea is also to remove a lot of soldering (e.g. Ispindel) and to get away from placing anything in the tank (e.g. Ispindel/Tilt).  
