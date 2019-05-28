@@ -6,14 +6,14 @@
 //         Email: klaus"a"bagge-nielsen.dk, April 2019.
 //         WWW.cheapfather.dk or www.posebryg.dk
 //
-//         Detection of Sound-Bubbles, Gravity calculation, Temperature,
+//         Detection of Sound-Bubbles, Temperature,
 //         + setpoint temperature control of Relay with Fallback (hence, if Ubidots
 //         connection falls the last known setpoint for temperature is used)!
 //         For frontend please make an account on Unibots and add
 //         details in below "setting"! 
 //
 //         Sound Sensor Detecting Module LM393 is on Pin D5/Pin14 and Relay on D7/Pin 13.
-//         LED for blinking when bubble is detected is on Pin 12/D6.
+//         Optional LED for blinking when bubble is detected is on Pin 12/D6.
 //         Temperature probe is on pin2/D4 of nodemcu!                                                                               
 //..................................................................................
  
