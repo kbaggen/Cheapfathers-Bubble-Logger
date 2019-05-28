@@ -1,7 +1,5 @@
 # Cheapfathers-Bubble-logger!
-A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (EXP8266). The sound detection is turned into Sound-Bubbles-Min (SBM) pr. Liter brew (SBM/L) there can be correlated with gravity (SG) though hydrometer measurements and finally give an indication/estimation of SG.
-**WORK in Progress - The use of polynomial to predicts the SG needs verification in detail. Hence, to be tested over the next months by 2-3 brews**
-
+A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (EXP8266). 
 Facebook group:
 https://www.facebook.com/groups/2176394599141882/
 
@@ -10,11 +8,8 @@ This project measure:
 1. the Sound-bubbles as CO2 escape the fermenter by a digital Sound Sensor Detecting Module LM393
 2. Temperature by ds18b20 and offset correction!
 3. One channel Relay to control a heat source! 
-4. A polonium is used to calculated an estimated/indicative SG (+/- 3 SG is the aim).
 
 Hence, we simply make use of the "Big Blops" coming from airlock during fermentation. Ever tried to put you ear near to the airlock? You be surprised how loud the sound is and this is what we measure!
-
-This project is very much inspired by  the commercial PLAATO product, but use different approach and very basic crude code to obtain the same functions. 
 
 As frontend "Ubidots for Education" is used!
 
@@ -29,7 +24,7 @@ See full brew here --> https://app.ubidots.com/ubi/public/getdashboard/page/34Pf
 Other brew: https://app.ubidots.com/ubi/public/getdashboard/page/oryUSQPFTyZBZYJ23le4xzNlOtk
 
 ### Project outcome 
-Hence, the goal is to have a temperature logger/controller, one tiny device to take care of measurement of fermentation rate, e.g. showing Acivity/Gravity and a same time control the temperature at one setpoint! The idea is to get one device instead of having both a temperature controller and fermentation-rate logger at a very low price, e.g. 10$ or EUR! Secondly, the idea is also to remove a lot of soldering (e.g. Ispindel) and to get away from placing anything in the tank (e.g. Ispindel/Tilt).  
+Hence, the goal is to have a temperature logger/controller, one tiny device to take care of measurement of fermentation rate, e.g. showing Acivity as CO2 "Sound-bubbles pr Minute" (SBM) and a same time control the temperature at one setpoint! The idea is to get one device instead of having both a temperature controller and fermentation-rate logger at a very low price, e.g. 10$ or EUR! Secondly, the idea is also to remove a lot of soldering (e.g. Ispindel) and to get away from placing anything in the tank (e.g. Ispindel/Tilt).  
 
 ### Important!
 * Airtight - For CO2 to be measured the fermenter needs to be airtight! Hence, FORGET you buckets! You need sealed AIRTHIGHT tanks to do this!
@@ -37,8 +32,6 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 * Sound sensor is prone to moisture, needs a "condom" (small water balloon)!
 * A airtight Blow-off system is needed as else krausen-yeast-particles from blow-off will set-off the measurements! Or, you might get away with a high headspace of 33% together with a low temperature and hence a slow fermentation. The size of the blow-out should at least be 1-2 liters of volume.
 * This equipment do make use of Arduino IDE, and hence, you need to be familiar with Arduino IDE or willing to learn!!!
-* **To make use of the inbuild polonium and hence SG estimation precise 4ml water should be added to the "S" airlock**!
-* **You must calibrate the Sound sensor as below!**
 
 
  <p align="center">
@@ -66,7 +59,7 @@ Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is o
 1. Get a Ubibots for education account!
 2. Install Arduino IDE 
    - install EXP8266 bards! 
-   - Download "tinyexpry.h" and "ubidotsesp8266.h" (se above folders) and place in libraries folder in it own directory.
+   - Download "ubidotsesp8266.h" (se above folders) and place in libraries folder in it own directory.
 3. Download my .ino file, and type in your own data under settings area in regards of ssid, wifi, Ubidot token,  etc.!
    - **Please notice**, OG, start temp, brew size (in Liters) and brew name needs updated before each run!
 4. Upload till NodeMCU though Arduino IDE
@@ -76,21 +69,18 @@ The settings you need to update is the following:
 //............ Settings/SETUP - PLEASE CHANGE accordingly............................
 #define TOKEN  "YOUR Ubidots token"                                         // Put here your Ubidots TOKEN  
 #define WIFISSID "YOUR wifi"                                                        // Put here your Wi-Fi SSID                     
-#define PASSWORD "YOUR pass"                                                                // Put here your Wi-Fi password                            
-char my_polynominal[100] = "(0.0000000000004*sum^3)-(0.0000001*sum^2)+(0.0049*sum)+0.33";  // Inset your polynomial if calibrated, sum = SBM/L
+#define PASSWORD "YOUR pass"                                                                // Put here your Wi-Fi password               
 double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
 #define DEVICE  "YOUR name"                                                                    // Name of brew, whatever
-double START_TEMP = YOUR temp;                                                                     // Start temperature
-double brewsize = YOUR bresize;                                                                       // The sieze of you brew in liters
-double OG = YOUR OG;                                                                           // Your start gravity, OG                                               
+double START_TEMP = YOUR temp;                                                                     // Start temperatu                          
 //...................................................................................
 ```
 Please ntoice the Punctuation Marks (") and where they are not, as this is important!
 
 
 ### Using Ubidot
-The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the following till Ubidots "temp", "settemp", "SBM", and the current "SBM_sum" of SBM. Further it push a calculated "SG" estimated by the initial "OG" and "brew size" you stated under settings, and it is utterly important it is entered correct for the script to work!
+The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the following till Ubidots "temp", "settemp", "SBM", and the current "SBM_sum" of SBM. 
 
  <p align="center">
   <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/you%20brew.png">
@@ -147,14 +137,13 @@ void loop() {
 <p align="center">
   <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sensors.png">
 </p>
+
 5. REmember to put LM393 back on D5/pin 14
 
 
 This give a high resolution sensor there miss a few and also post some double bubbles. This calibration should give you between 80 and up till 200 SBM at high krausen (maybe a bit more) depending on temperature/yeast/brew, etc! This setting is prone to sounds,  but light talking, music, drier and washing machine is ok to have nearby! 
 
-***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4 ml for the inbould polynoium. Secondly, take a picture of your LM393 potentiometer setting and stick to it especially if you update/change the polynoium***
-
-If you do not wish to make use of SG estimation and soly use it as activity logger you can ofcouse turn the potentiometer a bit more down to make it less sensitive! 
+***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4 ml. Secondly, take a picture of your LM393 potentiometer setting***
 
 *Please notice, the use in fridge is currently not fully tested (interference), but seems to work with a few miss-reading here and there depending on the age of the fridge and hence it level of interference!*
 
@@ -168,16 +157,5 @@ As the sensor got some shapes edges there will flence the ballon and secondly as
 ### Calibration of ds18b20 temperature probe
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
 
-### Calibration of the polynomial
-**Please Notice, the below is still work in prrogress**
-You might need to do your own SBM/L vs. hydrometer measurements to get good SG estimations as it is unclear to me how much tank seize, temperature, different LM393 and variations in airlocks all play together even taken the above calibration procedure into account and the amount of 4 ml in airlock! 
-
-If you should wish to update the polynomial base on above unknown factors, you will need to model a 3rd degree (or 2nd) polynomial based on Sound-Bubbles-Min/Liter (SBM/L) towards the reduction in SG from your hydrometer reading during a brew! I use the following 3rd degree polynomial for the SG estimation!
- <p align="center">
-  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/poly.png">
-</p>
-As it can be seen from the above picture showing data from 2 different settings of the LM393´s pontimeter, even a small difference from the calibration method of "1024", it do have a high impact of the needed SMB/L for the same reduction of SG. 
-
-The used polynoium inbuild in the script is curreently the "Blue Line"! The blue line is also the least sensitive setting for the sensor, and hence easier to work with in regards of sideby "niose". 
-
-The data I collected is at (excel) link: https://1drv.ms/x/s!An5QQQ1io7W7iPwHmv-1I0dIkRlGiw
+### SG estrimation by polynomial approach
+I have tried to see if the SG could be predicted by a factor of 3-4 SG points by a 3rd degree polynoium, but it is to unstable to include in code! So I have decided to remove this part for now!
