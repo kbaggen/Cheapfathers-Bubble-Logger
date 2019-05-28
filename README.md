@@ -22,7 +22,7 @@ Knowing the activity though CO2 bubble measurements over time including the star
 See full brew here --> https://app.ubidots.com/ubi/public/getdashboard/page/oryUSQPFTyZBZYJ23le4xzNlOtk
 
 Other brew(S): 
-https://app.ubidots.com/ubi/public/getdashboard/page/oryUSQPFTyZBZYJ23le4xzNlOtk
+https://app.ubidots.com/ubi/public/getdashboard/page/HfxDYm9CwcDeD6TUfL0alN4VtDM
 https://app.ubidots.com/ubi/public/getdashboard/page/34PfeVSlCYvi_2V9wT3byvlC1h0
 
 ### Project outcome 
