@@ -157,3 +157,17 @@ It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no a
 
 ### SG estrimation by polynomial approach
 I have tried to see if the SG could be predicted by a factor of 3-4 SG points by a 3rd degree polynoium, but it is to unstable to include in code! So I have decided to remove this part for now!
+
+### Other brews
+
+<p align="center">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sort.png">
+</p>
+
+<p align="center">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/oldboys.png">
+</p>
+
+<p align="center">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/rhubarbwheat.png">
+</p>
