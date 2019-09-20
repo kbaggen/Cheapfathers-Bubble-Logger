@@ -1,7 +1,6 @@
 # Cheapfathers-Bubble-logger!
 A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise set amount of water! 
-Facebook group:
-https://www.facebook.com/groups/2176394599141882/
+
 
 ### Introduction
 This project measure: 
@@ -174,13 +173,21 @@ The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-c
 If you wish to dig into the data a bit more see this link:
 https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
 
-### Brew with SG
+
+### Facebook group (if any questions)
+https://www.facebook.com/groups/2176394599141882/
+
+### Brews with SG
 <p align="center">
   <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/ReUse.png">
 </p>
 
 <p align="center">
   <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/raw_neipa.png">
+</p>
+
+<p align="center">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sw_clone.png">
 </p>
 
 ### Other brews
