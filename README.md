@@ -170,9 +170,10 @@ The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-c
 
  <img width="456" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/2nd_poly.png">
 
-If you wish to dig into the data a bit more see this link:
+If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger, a averge mean of 3 on the SG detemination was reached (range on 1 till 5 SG units off): 
 https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
 
+***So, if a keen eye on placemnt/alingment of sound probe, water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
 
 ### Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
