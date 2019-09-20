@@ -3,7 +3,7 @@
 //..................................................................................
 //         "Cheapfather´s Bubble-Logger!"                                                                     
 //         Script by www.Cheapfather.com, Klaus Bagge Nielsen                       
-//         Email: klaus"a"bagge-nielsen.dk, April 2019.                                                                  
+//         Email: klaus"a"bagge-nielsen.dk, September 2019.                                                                  
 //
 //         Detection of Sound-Bubbles, Gravity calculation, Temperature,
 //         + setpoint temperature control of Relay with Fallback (hence, if Ubidots
@@ -19,16 +19,16 @@
 
 
 //............ Settings/SETUP - PLEASE CHANGE accordingly............................
-#define TOKEN  "A1E-R7kDQLqVptXxmQvsZ6RHFHabNvO7vV"                                         // Put here your Ubidots TOKEN  
-#define WIFISSID "HomeBox-74C0_2.4G"                                                        // Put here your Wi-Fi SSID                     
-#define PASSWORD "93c24eacf"                                                                // Put here your Wi-Fi password                            
-char my_polynominal[100] = "(-0.0000004*sum^2)+(0.009*sum)";                                // Inset your polnominal if calibrated, sum = SBM/L
+#define TOKEN  "You token here"                                         // Put here your Ubidots TOKEN  
+#define WIFISSID "Your internet"                                                        // Put here your Wi-Fi SSID                     
+#define PASSWORD "PASSWORD"                                                                // Put here your Wi-Fi password                            
+char my_polynominal[100] = "(-0.0000004*sum^2)+(0.0089*sum)";                                // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
-#define DEVICE  "ReUseHopIPA"                                                               // Name of brew, whatever
-double START_TEMP = 19;                                                                     // Start temperature
-double brewsize = 16;                                                                       // The sieze of you brew in liters
-double OG = 1052;                                                                           // Your start gravity, OG                                               
+#define DEVICE  "You name"                                                               // Name of brew, whatever
+double START_TEMP = xx;                                                                     // Start temperature
+double brewsize = xx;                                                                       // The sieze of you brew in liters
+double OG = xxxx;                                                                           // Your start gravity, OG                                               
 //...................................................................................
 
 #include <tinyexpr.h>
