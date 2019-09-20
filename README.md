@@ -146,7 +146,7 @@ This give a high resolution sensor there miss a few and also post some double bu
 
 A picture of the amount of water under pressure:
 <p align="center">
-  <img width="255" height="146" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/water_airlock.png">
+  <img width="255" height="146" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/water_airlock.jpg">
 </p>
 
 ### Fitting the Condom - Water Balloon on the LM393 - fitting in Airlock
