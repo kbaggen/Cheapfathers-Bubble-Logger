@@ -144,6 +144,10 @@ This give a high resolution sensor there miss a few and also post some double bu
 
 ***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 5 ml. Secondly, take a picture of your LM393 potentiometer setting and the amount of water in airlock from brew to brew***
 
+A picture of the amount of water under pressure:
+<p align="center">
+  <img width="255" height="146" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/water_airlock.png">
+</p>
 
 ### Fitting the Condom - Water Balloon on the LM393 - fitting in Airlock
 The LM393 need a mosture protection, and this is done by a small water balloon, and it should be rather tight around the noose, but still loose as above pictures shows. It  needs to sit tight in the airlock making an seal to resticict any water from vaporiation. This restict the CO2 in getting out so to let the CO2 out please drill a small hole in the airlock! Align it so the mirc is place over the direct hole in the airlock, so the sesor get the direct sound "blup". 
