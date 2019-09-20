@@ -160,10 +160,10 @@ This software give an indicative SG with an offset of  +/- 4 SG untis if used in
 
 The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-cacluated in regards of SBM/L and this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
 
- <img width="456" height="746" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/2nd_poly.png">
+ <img width="456" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/2nd_poly.png">
 
 An overview of the current data I have there is deemed ok according to the code-development contra reliability:
- <img width="256" height="546" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/overview.png">
+ <img width="556" height="346" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/overview.png">
 
 If you wish to dig into the data a bit more see this link:
 https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
