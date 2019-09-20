@@ -75,7 +75,7 @@ double TEMP_OFFSET = 0;                                                         
 #define DEVICE  "Tester"                                                                 // Name of brew, whatever
 double START_TEMP = 20;                                                                     // Start temperature
 double brewsize = 20;                                                                       // The sieze of you brew in liters
-double OG = 1050;                                                                           // Your start gravity, OG                                               
+double OG = 1050;                                                                           // Your start gravity, OG                     ```                          
 
 Please ntoice the Punctuation Marks (") and where they are not, as this is important!
 
