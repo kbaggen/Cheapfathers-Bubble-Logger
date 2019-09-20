@@ -177,6 +177,13 @@ If you wish to dig into the data a bit more see this link:
 https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
 
 ### Brew with SG
+<p align="center">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/ReUse.png">
+</p>
+
+<p align="center">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/raw_neipa.png">
+</p>
 
 ### Other brews
 <p align="center">
