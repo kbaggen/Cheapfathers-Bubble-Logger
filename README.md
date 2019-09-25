@@ -170,12 +170,12 @@ The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-c
 
  <img width="456" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/2nd_poly.png">
 
-If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger, a averge mean of 3 on the SG detemination was reached (range on 1 till 5 SG units off): 
+If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger with a standard error of the mean of +/- 3 SG units:
 https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
 
-***So, if a keen eye on placemnt/alingment of sound probe, 5ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
+***So, if a keen eye on placement/alingment of sound probe, 5ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
 
-You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same likley needed if you change sound sensor.
+You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same is likley needed if you change sound sensor.
 
 ### Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
