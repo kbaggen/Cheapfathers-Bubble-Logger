@@ -103,7 +103,7 @@ To have Temperature control, you need to add to Dashboard (where you most likely
 
 ## Calibration 
 ### Calibration of Sound Sensor Detecting Module LM393
-The digital Sound Sensor Detecting Module LM393 needs to be calibrated to a degree where it is responsive, but where we also can "work" besides make some noise. What I do is: 
+The digital Sound Sensor Detecting Module LM393 needs to be calibrated to a degree where it is responsive, but where we also can "work" besides make some noise. What I do as a base calibration: 
 
 1. Put on the "condom" (small water balloon) on the LM393, se picture!
 2. To calibrate the LM393 connect it to A0 (analog pin) (and ofcouse 3.3v/GRD) and run below script in Arduino IDE:
@@ -141,7 +141,7 @@ void loop() {
   <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sensors.png">
 </p>
 
-5. REmember to put LM393 back on D5/pin 14
+5. Remember to put LM393 back on D5/pin 14
 
 
 This give a high resolution sensor there miss a few and also post some double bubbles. This calibration should give you between 50 and up till 100-150 SBM at high krausen depending on temperature/yeast/brew, etc! This setting is prone to high sounds,  but light talking, music, drier and washing machine is ok to have nearby! 
@@ -164,7 +164,7 @@ As the sensor got some shapes edges there will flence the ballon and secondly as
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
 
 ### SG estrimation by polynomial approach
-This software give an indicative SG with an offset of  +/- 4 SG untis if used in a airtight tank and an S-shaped airlock with 5 ml water in it! By indicative I mean that sometimes the SBM_sum and hence the SBM/L go off, likely to a leak, atmospheric pressure, etc. whereby the SG get out of control.
+This software give an indicative SG with an offset of  +/- 4 SG untis if used in a airtight tank and an S-shaped airlock with 5 ml water in it!
 
 The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-cacluated in regards of SBM/L and this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
 
@@ -175,7 +175,7 @@ https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
 
 ***So, if a keen eye on placemnt/alingment of sound probe, 5ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
 
-You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L.
+You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same likley needed if you change sound sensor.
 
 ### Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
