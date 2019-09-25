@@ -28,8 +28,8 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 * Sound detecting is prone to sound, hence, best placed in box/fridge especially if no interference is seen from your fridge! 
 * Sound sensor is prone to moisture, needs a "condom" (small water balloon)!
 * Krausen-yeast-particles or wort shootng on off fermenter will set-off the measurements! hence, ..... 
-* * A airtight Blow-off system is needed if you use low headspace, 
-* * Or,  a high headspace of 33% together with a low temperature and hence a slow fermentation can also overcome the issue!
+  - A airtight Blow-off system is needed if you use low headspace, 
+  - Or,  a high headspace of 33% together with a low temperature and hence a slow fermentation can also overcome the issue!
 * This equipment do make use of Arduino IDE, and hence, you need to be familiar with Arduino IDE or willing to learn!!!
 
 
@@ -57,8 +57,8 @@ Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is o
 1. Get a Ubibots for education account!
 2. Install Arduino IDE 
    - install EXP8266 bards! 
-   - Download "ubidotsesp8266.h" (se above folders) and place in libraries folder in it own directory.
-   - Download "tinyexpr-master" (se above folders) and place in libraries folder in it own directory.
+   - Download "ubidotsesp8266.h" (se above folders) and place in Arduino libraries folder in it own directory.
+   - Download "tinyexpr-master" (se above folders) and place in Arduino libraries folder in it own directory.
 3. Download my .ino file, and type in your own data under settings area in regards of ssid, wifi, Ubidot token,  etc.!
    - **Please notice**, OG, start temp, brew size (in Liters) and brew name needs updated before each run!
 4. Upload till NodeMCU though Arduino IDE
@@ -146,7 +146,7 @@ void loop() {
 
 This give a high resolution sensor there miss a few and also post some double bubbles. This calibration should give you between 50 and up till 100-150 SBM at high krausen depending on temperature/yeast/brew, etc! This setting is prone to high sounds,  but light talking, music, drier and washing machine is ok to have nearby! 
 
-***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 5 ml. Secondly, take a picture of your LM393 potentiometer setting and the amount of water in airlock from brew to brew***
+***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 5 ml. Secondly, take a picture of your LM393 potentiometer setting and the amount of water in airlock from brew to brew***
 
 A picture of the amount of water under pressure:
 <p align="center">
@@ -173,7 +173,9 @@ The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-c
 If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger, a averge mean of 3 on the SG detemination was reached (range on 1 till 5 SG units off): 
 https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
 
-***So, if a keen eye on placemnt/alingment of sound probe, water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
+***So, if a keen eye on placemnt/alingment of sound probe, 5ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
+
+You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L.
 
 ### Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
