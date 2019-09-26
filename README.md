@@ -138,7 +138,7 @@ void loop() {
 
 
 <p align="center">
-  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sensors.png">
+  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sound_sensor.png">
 </p>
 
 5. Remember to put LM393 back on D5/pin 14
