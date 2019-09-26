@@ -146,7 +146,7 @@ void loop() {
 
 This give a high resolution sensor there miss a few and also post some double bubbles. This calibration should give you between 50 and up till 100-150 SBM at high krausen depending on temperature/yeast/brew, etc! This setting is prone to high sounds,  but light talking, music, drier and washing machine is ok to have nearby! 
 
-***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 5 ml. Secondly, take a picture of your LM393 potentiometer setting and the amount of water in airlock from brew to brew***
+***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4 ml. Secondly, take a picture of your LM393 potentiometer setting and the amount of water in airlock from brew to brew***
 
 A picture of the amount of water under pressure:
 <p align="center">
@@ -173,7 +173,7 @@ The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-c
 If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger with a standard error of the mean of +/- 3 SG units:
 https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
 
-***So, if a keen eye on placement/alingment of sound probe, 5ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
+***So, if a keen eye on placement/alingment of sound probe, 4ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
 
 You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same is likley needed if you change sound sensor.
 
