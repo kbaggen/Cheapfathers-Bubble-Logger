@@ -164,7 +164,7 @@ As the sensor got some shapes edges there will flence the ballon and secondly as
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
 
 ### SG estrimation by polynomial approach
-This software give an indicative SG with an offset of  +/- 4 SG untis if used in a airtight tank and an S-shaped airlock with 5 ml water in it!
+This software give an indicative SG with an offset of  +/- 4 SG untis if used in a airtight tank and an S-shaped airlock with 4 ml water in it!
 
 The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-cacluated in regards of SBM/L and this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
 
