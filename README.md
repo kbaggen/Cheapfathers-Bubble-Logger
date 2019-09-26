@@ -134,7 +134,7 @@ void loop() {
   <img width="556" height="276" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/Calibration.png">
 </p>
 
-4. DONE! This give you a calibrated LM393 (and mine look like this):
+4. DONE! This give you a calibrated LM393, whereoff, mine look like this (I propose you set yours accordingly as closed as you can of below picture):
 
 
 <p align="center">
