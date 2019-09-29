@@ -177,6 +177,14 @@ https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
 
 You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same is likley needed if you change sound sensor.
 
+So to get SG working you need:
+* Calibtated sensor
+* 4ml water in s-sharped airlock
+* Airtight fermenter
+* Excact measument of brew size/liters as SBM/L is the backbone of SG calculation
+* Likely an update of polynomial based on you sensor/equipment
+
+
 ### Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
 
