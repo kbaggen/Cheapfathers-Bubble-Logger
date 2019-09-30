@@ -144,7 +144,7 @@ void loop() {
 5. Remember to put LM393 back on D5/pin 14
 
 
-This give a high resolution sensor there miss a few and also post some double bubbles. This calibration should give you between 50 and up till 100-150 SBM at high krausen depending on temperature/yeast/brew, etc! This setting is prone to high sounds,  but light talking, music, drier and washing machine is ok to have nearby! 
+This give a high resolution sensor there miss a few and also post some double bubbles. This calibration should give you between 50 and up till 100-150 SBM at high krausen depending on temperature/yeast/brew size (I brew in 14-25L amounts), etc! This setting is prone to high sounds,  but light talking, music, drier and washing machine is ok to have nearby! 
 
 ***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4 ml. Secondly, take a picture of your LM393 potentiometer setting and the amount of water in airlock from brew to brew***
 
