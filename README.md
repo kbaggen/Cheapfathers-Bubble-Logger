@@ -6,7 +6,8 @@ A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 b
 This project measure: 
 1. the Sound-bubbles as CO2 escape the fermenter by a digital Sound Sensor Detecting Module LM393
 2. Temperature by ds18b20 and offset correction!
-3. One channel Relay to control a heat source 8I used the cold sheed or cold utility floor as cooling, and hence, only need a heat source). 
+3. One channel Relay to control a heat source. 
+(I used the cold shed or cold utility floor as cooling, and hence, only need a heat source) 
 
 Hence, we simply make use of the "Big Blops" coming from airlock during fermentation. Ever tried to put you ear near to the airlock? You be surprised how loud the sound is and this is what we measure!
 
