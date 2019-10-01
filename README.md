@@ -185,6 +185,16 @@ So to get SG working you need:
 * Excact measument of brew size/liters as SBM/L is the backbone of SG calculation
 * Likely an update of polynomial based on you sensor/equipment
 
+### Atmospheric pressure and SBM - Indirectly impacting SG
+The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak. This can be handled by calculating in the excel sheet if you know the pressure! What I do is I have set 1020 hPa as my baseline and as the range of pressure in Denmark is at the very high 1040, and the very low 980 hPa, giving a range of 60 hPa. Hence, if the pressure is out of spec (1014-1020 hPa) I use teh follow function:
+
+1-((1020-x)/60)) = Y, where X is the pressure at the giving time!
+
+This turns for instance at very low pressure of 990 hPa: 1-((1020-980)/60)=Y <=> Y= 0.6, and this factor is then used to re-calculate the SBM as to compresate for the small bubbles.
+
+**Currently, the script hence only turn a working SG if your have high to normal pressure** 
+
+**I plan to add a "BMP180 Digital temperature and pressure Sensor" and hence include this in comming code!**
 
 ### Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
