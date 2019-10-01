@@ -190,7 +190,7 @@ The Atmospheric pressure do impact on the amount of bubbles in the sense 50% mor
 
 1-((1020-x)/60)) = Y, where X is the pressure at the giving time!
 
-This turns for instance at very low pressure of 990 hPa: 1-((1020-980)/60)=Y <=> Y= 0.6, and this factor is then used to re-calculate the SBM as to compresate for the small bubbles.
+This turns for instance at very low pressure of 995 hPa: 1-((1020-995)/60)=Y <=> Y= 0.6, and this factor is then used to re-calculate the SBM as to compresate for the small bubbles.
 
 **Currently, the script hence only turn a working SG if your have high to normal pressure** 
 
