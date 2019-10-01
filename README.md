@@ -1,5 +1,5 @@
 # Cheapfathers-Bubble-logger!
-A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise set amount of water! 
+A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise set amount of water and under normal Atmospheric pressure (1010-1020 hPa)! 
 
 
 ### Introduction
