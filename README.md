@@ -58,8 +58,8 @@ Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is o
 1. Get a Ubibots for education account!
 2. Install Arduino IDE 
    - install EXP8266 bards! 
-   - Download "ubidotsesp8266.h" (se above folders) and place in Arduino libraries folder in it own directory.
-   - Download "tinyexpr-master" (se above folders) and place in Arduino libraries folder in it own directory.
+   - Download "ubidotsesp8266.h" (se above folders) and place in Arduino libraries folder in it own directory (C:\Users\klaus\Documents\Arduino\libraries\ubidots-esp8266-master).
+   - Download "tinyexpr-master" (se above folders) and place in Arduino libraries folder in it own directory (C:\Users\klaus\Documents\Arduino\libraries\tinyexpr-master).
 3. Download my .ino file, and type in your own data under settings area in regards of ssid, wifi, Ubidot token,  etc.!
    - **Please notice**, OG, start temp, brew size (in Liters) and brew name needs updated before each run!
 4. Upload till NodeMCU though Arduino IDE
