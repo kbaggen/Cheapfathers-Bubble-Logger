@@ -201,6 +201,10 @@ https://www.facebook.com/groups/2176394599141882/
 
 ### Brews with SG
 <p align="center">
+  <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/RawWeiss.png">
+</p>
+
+<p align="center">
   <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/ReUse.png">
 </p>
 
