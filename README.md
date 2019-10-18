@@ -186,11 +186,11 @@ So to get SG working you need:
 * Likely an update of polynomial based on you sensor/equipment
 
 ### Atmospheric pressure and SBM - Indirectly impacting SG
-The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak. This can be handled by calculating in the excel sheet if you know the pressure! What I do is I have set 1020 hPa as my baseline and as the range of pressure in Denmark is at the very high 1040, and the very low 980 hPa, giving a range of 60 hPa. Hence, if the pressure is out of spec (1014-1020 hPa) I use teh follow function:
+The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, or the density of gasses in each bubbles is less. This can be handled by calculating in the excel sheet if you know the pressure! What I do is I have set 1020 hPa as my baseline and as the range of pressure in Denmark is at the very high 1040, and the very low 980 hPa, giving a range of 60 hPa. Hence, if the pressure is out of spec (1014-1020 hPa) I use the follow function:
 
 1-((1020-x)/60)) = Y, where X is the pressure at the giving time!
 
-This turns for instance at very low pressure of 995 hPa: 1-((1020-995)/60)=Y <=> Y= 0.6, and this factor is then used to re-calculate the SBM as to compresate for the small bubbles.
+This turns for instance at very low pressure of 995 hPa: 1-((1020-995)/60)=Y <=> Y= 0.6, and this factor is then used to re-calculate the SBM as to compresate for the release of CO2 at low Atmospheric pressure.
 
 **Currently, the script hence only turn a working SG if your have high to normal pressure** 
 
