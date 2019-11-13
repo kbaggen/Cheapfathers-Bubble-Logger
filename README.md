@@ -75,17 +75,17 @@ Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is o
 The settings you need to update is the following:
 ```
 //............ Settings/SETUP - PLEASE CHANGE accordingly............................
-#define TOKEN  "YOUR Ubidots token"                                         // Put here your Ubidots TOKEN  
-#define WIFISSID "YOUR wifi"                                                        // Put here your Wi-Fi SSID                     
-#define PASSWORD "YOUR pass"                                                                // Put here your Wi-Fi password               
-char my_polynominal[100] = "(-0.0000004*sum^2)-(0.009*sum)";                              // Inset your polnominal if calibrated, sum = SBM/L
-double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
-double Pressure_OFFSET = 5                                                                  // Ofset presure, check, you pressure on internet nearby!
+#define TOKEN  "YOUR Ubidots token"                                    // Put here your Ubidots TOKEN  
+#define WIFISSID "YOUR wifi"                                           // Put here your Wi-Fi SSID                     
+#define PASSWORD "YOUR pass"                                           // Put here your Wi-Fi password               
+char my_polynominal[100] = "(-0.0000004*sum^2)-(0.009*sum)";           // Inset your polnominal if calibrated, sum = SBM/pt/L
+double TEMP_OFFSET = 0;                                                // Offset temperature of ds18b20 sensor
+double PRESSURE_OFFSET = 5;                                            // Offset presure, check, you pressure on internet nearby!
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
-#define DEVICE  "Tester"                                                                 // Name of brew, whatever
-double START_TEMP = 20;                                                                     // Start temperature
-double brewsize = 20;                                                                       // The sieze of you brew in liters
-double OG = 1050;                                                                           // Your start gravity, OG                     
+#define DEVICE  "Tester"                                                // Name of brew, whatever
+double START_TEMP = 20;                                                 // Start temperature
+double brewsize = 20;                                                   // The sieze of you brew in liters
+double OG = 1050;                                                       // Your start gravity, OG                     
 
 ```                          
 
