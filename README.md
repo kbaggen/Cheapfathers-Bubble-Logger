@@ -18,7 +18,11 @@ As frontend "Ubidots for Education" or "Ubidots STERM" is used!
 Knowing the yeast activity though CO2 bubble measurements over time including the start of decline, we can better foresee when the SG is close to FG, and better make decision on dry-hopping, temperature changes, etc.! 
 
  <p align="center">
-  <img width="755" height="800" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/raw_neipa.png">
+  <img width="755" height="800" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/brroklyn.png">
+</p>
+
+<p align="center">
+  <img width="755" height="800" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/yoga.png">
 </p>
 (other pictures of brews in the end)
 
