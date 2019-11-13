@@ -57,10 +57,15 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 
 
 ### Wiring
-Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is on Pin D5/Pin14 and Relay on D7/Pin 13. BDM280 is on SCL and SDA. (Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity).
- 
+ - Temp probe (ds18b20) is on D4/pin2. 
+ - The Sound Sensor Detecting Module LM393 is on Pin D5/Pin14.
+ - Relay on D7/Pin 13. 
+
+ - BMP280 pressure module is on pin 4/D2 for SDA and SCL is on pin5/D1.
+(Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity).
+
  <p align="center">
-  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram2.png">
+  <img width="556" height="646" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram2.png">
 </p>
  
 ## Setup
