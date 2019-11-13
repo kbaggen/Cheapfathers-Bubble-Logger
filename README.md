@@ -62,11 +62,11 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
  - Relay on D7/Pin 13. 
 
  - BMP280 pressure module is on pin 4/D2 for SDA and SCL is on pin5/D1.
-(Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity).
 
- <p align="center">
+<p align="center">
   <img width="556" height="646" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram2.png">
 </p>
+(Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity).
  
 ## Setup
 1. Get a Ubibots for education account!
