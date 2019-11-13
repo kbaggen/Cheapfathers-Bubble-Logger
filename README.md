@@ -22,7 +22,7 @@ Knowing the yeast activity though CO2 bubble measurements over time including th
 </p>
 
 <p align="center">
-  <img width="755" height="400" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/yoga.png">
+  <img width="755" height="400" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/yoga2.png">
 </p>
 (other pictures of brews in the end)
 
