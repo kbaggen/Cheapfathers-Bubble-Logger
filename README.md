@@ -38,7 +38,7 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 * Krausen-yeast-particles or wort shooting out onto the sound detector will set-off the measurements! hence, ..... 
   - A airtight Blow-off system is needed if you use low headspace, 
   - Or,  a high headspace of 33% together with a low temperature and hence a slow fermentation can also overcome the issue!
-* All calculations is based on precise amounts fo wort, hence, keep eye on you amounts in Liters.
+* All calculations is based on precise amounts of wort, hence, keep eye on you amounts in Liters.
 * This equipment do make use of Arduino IDE, and hence, you need to be familiar with Arduino IDE or willing to learn!!!
 
 
@@ -51,7 +51,7 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 Besides a NodeMCU and some double female til female wires to connect it all:
  - Temp probe (ds18b20 + resistor (4,7K ohm)) is on D4/pin2. 
  - The Sound Sensor Detecting Module LM393 is on Pin D5/Pin14.
- - BMP280 pressure module is on pin 4/D2 for SDA and SCL is on pin5/D1.
+ - BMP280 pressure module is on pin 4/D2 for SDA and SCL is on pin5/D1. You need to solder the header onto the BMP280, and **this is the only place any soldering is needed in this project.
  - Optinal - A single side Relay (D7/Pin 13). 
 <p align="center">
   <img width="556" height="646" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram2.png">
