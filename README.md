@@ -62,9 +62,9 @@ Besides a NodeMCU and some double female til female wires to connect it all:
 1. Get a Ubibots for education account!
 2. Install Arduino IDE 
    - install EXP8266 boards! Se "http://arduino.esp8266.com/Arduino/versions/2.0.0/doc/installing.html"
-   - Download "dependencies.zip" (se above folders) and extract the content in Arduino libraries folder so all the various packets isin it own directory (e.g. C:\Users\klaus\Documents\Arduino\libraries\xxxxxx).
+   - Download "dependencies.zip" (se above folders) and extract the content into Arduino libraries folder so all the various folders of zip-file is kept (e.g. varoius folder stored into C:\Users\klaus\Documents\Arduino\libraries\xxxxxx).
  3. Download my .ino file, and type in your own data under settings area in regards of ssid, wifi, Ubidot token,  etc.!
-   - **Please notice**, OG, start temp, brew size (in Liters), and brew name needs updated before each run!
+   - **Please notice**, OG, start temp, brew size (in Liters), and brew name needs updated before each brewing!
 4. Upload till NodeMCU though Arduino IDE
 
 The settings you need to update is the following:
