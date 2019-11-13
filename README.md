@@ -47,12 +47,12 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 </p>
 
 
-### Equipment -Wiring
-Besides a NodeMCU and some femal til femal wires to connect it all:
+### Equipment - Wiring
+Besides a NodeMCU and some double female til female wires to connect it all:
  - Temp probe (ds18b20 + resistor (4,7K ohm)) is on D4/pin2. 
  - The Sound Sensor Detecting Module LM393 is on Pin D5/Pin14.
  - BMP280 pressure module is on pin 4/D2 for SDA and SCL is on pin5/D1.
- - Optinal - Relay on D7/Pin 13. 
+ - Optinal - A single side Relay (D7/Pin 13). 
 <p align="center">
   <img width="556" height="646" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram2.png">
 </p>
