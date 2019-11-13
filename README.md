@@ -1,17 +1,18 @@
 # Cheapfathers-Bubble-logger!
-A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise set amount of water and under normal Atmospheric pressure (1010-1020 hPa)! 
+A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise amount of water (4 ml)! 
 
 
 ### Introduction
 This project measure: 
 1. the Sound-bubbles as CO2 escape the fermenter by a digital Sound Sensor Detecting Module LM393
 2. Temperature by ds18b20 and offset correction!
-3. One channel Relay to control a heat source. 
-(I used the cold shed or cold utility floor as cooling, and hence, only need a heat source) 
+3. SG is calculated from complex model taking pressure and temperatur into account.
+4. One channel Relay to control a heat source. 
+(I used the cold sheed or cold utility floor as cooling, and hence, only need a heat source) 
 
 Hence, we simply make use of the "Big Blops" coming from airlock during fermentation. Ever tried to put you ear near to the airlock? You be surprised how loud the sound is and this is what we measure!
 
-As frontend "Ubidots for Education" is used!
+As frontend "Ubidots for Education" or "Ubidots STERM" is used!
 
 ### Purpose
 Knowing the yeast activity though CO2 bubble measurements over time including the start of decline, we can better foresee when the SG is close to FG, and better make decision on dry-hopping, temperature changes, etc.! 
@@ -22,15 +23,16 @@ Knowing the yeast activity though CO2 bubble measurements over time including th
 (other pictures of brews in the end)
 
 ### Project outcome 
-Hence, the goal is to have a temperature logger/controller, one tiny device to take care of measurement of fermentation rate, e.g. showing Acivity as CO2 "Sound-bubbles pr Minute" (SBM) and a same time control the temperature at one setpoint! Secondly, to give an indicative SG estrimate with a offset of +/- 4 SG units. The idea is to get one device instead of having both a temperature controller and fermentation-rate logger at a very low price, e.g. 10$ or EUR! Secondly, the idea is also to remove a lot of soldering (e.g. Ispindel) and to get away from placing anything in the tank (e.g. Ispindel/Tilt). In some sense this is a DIY Plaato.  
+Hence, the goal is to have a temperature logger/controller, one tiny device to take care of measurement of fermentation rate, e.g. showing Acivity as CO2 "Sound-bubbles pr Minute" (SBM) and a same time control the temperature at one setpoint! Secondly, to give an indicative SG estrimate with a offset of +/- 2 SG units. The idea is to get one device instead of having both a temperature controller and fermentation-rate logger at a very low price, e.g. 10$ or EUR! Secondly, the idea is also to remove a lot of soldering (e.g. Ispindel) and to get away from placing anything in the tank (e.g. Ispindel/Tilt). In some sense this is a DIY Plaato.  
 
 ### Important!
 * Airtight - For CO2 to be measured the fermenter needs to be airtight! Hence, FORGET you buckets! You need sealed AIRTHIGHT tanks to do this!
-* Sound detecting is prone to sound, hence, best placed in box/fridge especially if no interference is seen from your fridge! 
-* Sound sensor is prone to moisture, needs a "condom" (small water balloon)!
+* Sound detecting is prone to sound, hence, best placed in box/fridge even the calibration is set to allow rather much noise nearby. 
+* Sound sensor is prone to moisture, needs a "condom" (small water balloon, se below)!
 * Krausen-yeast-particles or wort shooting out onto the sound detector will set-off the measurements! hence, ..... 
   - A airtight Blow-off system is needed if you use low headspace, 
   - Or,  a high headspace of 33% together with a low temperature and hence a slow fermentation can also overcome the issue!
+* All calculations is based on precise amounts fo wort, hence, keep eye on you amounts in Liters.
 * This equipment do make use of Arduino IDE, and hence, you need to be familiar with Arduino IDE or willing to learn!!!
 
 
@@ -40,15 +42,16 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 
 
 ### Equipment
-1. Sound Sensor Detecting Module LM393
-2. ds18b20  + resistor (4,7K ohm)!
-3. NodeMCU (others likely also fine)!
-4. Wires!
-5. One small single-channel relay
+1. Sound Sensor Detecting Module LM393.
+2. ds18b20  + resistor (4,7K ohm).
+3. NodeMCU.
+4. BDM280 pressure model.
+5. Wires!
+6. Optional - One small single-channel relay, needed of you wish to control temeprature.
 
 
 ### Wiring
-Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is on Pin D5/Pin14 and Relay on D7/Pin 13. ***Note!*** Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity!
+Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is on Pin D5/Pin14 and Relay on D7/Pin 13. BDM280 is on SCL and SDA. (Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity).
  
  <p align="center">
   <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram1.png">
@@ -57,11 +60,10 @@ Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is o
 ## Setup
 1. Get a Ubibots for education account!
 2. Install Arduino IDE 
-   - install EXP8266 bards! 
-   - Download "ubidotsesp8266.h" (se above folders) and place in Arduino libraries folder in it own directory (C:\Users\klaus\Documents\Arduino\libraries\ubidots-esp8266-master).
-   - Download "tinyexpr-master" (se above folders) and place in Arduino libraries folder in it own directory (C:\Users\klaus\Documents\Arduino\libraries\tinyexpr-master).
-3. Download my .ino file, and type in your own data under settings area in regards of ssid, wifi, Ubidot token,  etc.!
-   - **Please notice**, OG, start temp, brew size (in Liters) and brew name needs updated before each run!
+   - install EXP8266 bards! Se internet for details!
+   - Download "dependencies.zip" (se above folders) and extract the content in Arduino libraries folder so all the various packets isin it own directory (e.g. C:\Users\klaus\Documents\Arduino\libraries\xxxxxx).
+ 3. Download my .ino file, and type in your own data under settings area in regards of ssid, wifi, Ubidot token,  etc.!
+   - **Please notice**, OG, start temp, brew size (in Liters), and brew name needs updated before each run!
 4. Upload till NodeMCU though Arduino IDE
 
 The settings you need to update is the following:
@@ -70,7 +72,7 @@ The settings you need to update is the following:
 #define TOKEN  "YOUR Ubidots token"                                         // Put here your Ubidots TOKEN  
 #define WIFISSID "YOUR wifi"                                                        // Put here your Wi-Fi SSID                     
 #define PASSWORD "YOUR pass"                                                                // Put here your Wi-Fi password               
-char my_polynominal[100] = "(-0.0000004*sum^2)-(0.0089*sum)";                              // Inset your polnominal if calibrated, sum = SBM/L
+char my_polynominal[100] = "(-0.0000004*sum^2)-(0.009*sum)";                              // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
 #define DEVICE  "Tester"                                                                 // Name of brew, whatever
@@ -84,23 +86,15 @@ Please ntoice the Punctuation Marks (") and where they are not, as this is impor
 
 
 ### Using Ubidot
-The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the following till Ubidots "temp", "settemp", "SBM", and the current "SBM_sum" of SBM. The script push data every second minute.
+The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the following till Ubidots "temp", "settemp", "SBM", and the current "SBM_sum_pt_L" of SBM. The script push data every second minute.
 
  <p align="center">
   <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/you%20brew.png">
 </p>
 
-Based on the data you can create a Dashboard and graphs where you have max. 500 datapoints, hence, you needs to under device create "Rolling Windows" where you make an average calculation every 60 min (the 500 datapoints equalls 18-20 days). To do so, select "Rolling Windows/YOUR Brew/SBM/Average " type in 60 mins and select your "Start date+time". Same for other data you wish to show!
-
- <p align="center">
-  <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/avg.png">
-</p>
+Based on the data you can create a Dashboard and graphs whit your data as the various Dashboards above (is from Ubidtos STEM) and below (Ubidots EDUCATION) shows.
 
 To have Temperature control, you need to add to Dashboard (where you most likely also wish to add the above average SBM and SG as a graph), a "Control/Slider/Settemp" widget of the range of your chosen temperature range (10-30C)! It should be noted the script do not support values below 1´C and turn over to a backup system if values below 1 is set. This is to secure the temperature system don’t go down if connection till "Ubidots Education" is lost (if no connection a value of 0 or below is read and posted by the logger/Ubidtos).
-
- <p align="center">
-  <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/settemp_control.png">
-</p>
 
 ## Calibration 
 ### Calibration of Sound Sensor Detecting Module LM393
@@ -165,36 +159,32 @@ As the sensor got some shapes edges there will flence the ballon and secondly as
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
 
 ### SG estrimation by polynomial approach
-This software give an indicative SG with an offset of  +/- 4 SG untis if used in a airtight tank and an S-shaped airlock with 4 ml water in it!
+This software give an indicative SG with an offset of  +/- 2 SG untis if used in a airtight tank and an S-shaped airlock with 4 ml water in it!
 
-The SG is caclualted by we measure the SBM over time as SBM_sum and this is re-cacluated in regards of SBM/L and this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
+The SG is caclualted by we measure the SBM over time and this is re-cacluated in regards of SBM/pt/L by taken the pressure (p), temperature (t) and brew sieze into account (L), and hence this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
 
  <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/data.png">
 
-If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger with a standard error of the mean of +/- 3 SG units:
-https://1drv.ms/x/s!An5QQQ1io7W7icA0W9ybBQ9lw90SOQ?e=ATa4Bc
+If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger with a standard error of the mean of +/- 2 SG units:
+
+ <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/mean_data.png">
 
 ***So, if a keen eye on placement/alingment of sound probe, 4ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
 
 You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same is likley needed if you change sound sensor.
 
-So to get SG working you need:
-* Calibtated sensor
-* 4ml water in s-sharped airlock
-* Airtight fermenter
-* Excact measument of brew size/liters as SBM/L is the backbone of SG calculation
-* Likely an update of polynomial based on you sensor/equipment
 
-### Atmospheric pressure and SBM - Indirectly impacting SG
-The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, or the density of gasses in each bubbles is less. This can be handled by calculating in the excel sheet if you know the pressure! What I do is I have set 1020 hPa as my baseline and as the range of pressure in Denmark is at the very high 1040, and the very low 980 hPa, giving a range of 60 hPa. Hence, if the pressure is out of spec (1014-1020 hPa) I use the follow function:
+### Atmospheric pressure + Temperature and SBM - Indirectly impacting SG
+The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, or the density of gasses in each bubbles is less. This can be handled by calculating if you know the pressure, hence the BDM280 sensor! What I do is I have set 1015 hPa as my baseline as this is the geomean pressure in Denmark, furthermore at the very high the pressure is 1040, and at  the very low 980 hPa, giving a range of 60 hPa. Hence, to account for the pressure-range over the year I use:
 
-1-((1020-x)/60)) = Y, where X is the pressure at the giving time!
+1-((1015-x)/60)), where X is the pressure at the giving time!
 
-This turns for instance at very low pressure of 995 hPa: 1-((1020-995)/60)=Y <=> Y= 0.6, and this factor is then used to re-calculate the SBM as to compresate for the release of CO2 at low Atmospheric pressure.
+This turns for instance at very low pressure of 995 hPa: 1-((1015-995)/60)=Y <=> Y= 0.666, and this factor is then used to re-calculate the SBM/L into SBM/p/L to compresate for the release of CO2 at low Atmospheric pressure.
 
-**Currently, the script hence only turn a working SG if your have high to normal pressure** 
+The temperature also impacts on the acivity of gasses, and hence at lower temperature the gas is not moving as fast and therefore the bubbles rate is lower at a lager og 10`c vs. an ale of 20´C. So the temperature plays agains the low pressure, and final formel for temoerature and pressure, called PT-factor is:
 
-**I plan to add a "BMP180 Digital temperature and pressure Sensor" and hence include this in comming code!**
+PT-faktor => 1-((1015-x)/60))*(TEMP/20)
+
 
 ### Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
