@@ -159,12 +159,15 @@ As the sensor got some shapes edges there will flence the ballon and secondly as
 ### Calibration of ds18b20 temperature probe
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
 
+### Calibration of BDM280 pressure sensor
+Check the pressure in a serial monitor of Arduino IDE and if it is as mine was 5 hPA off (to the one you compare with on internet as nearby to you). The altitude of you location vs. the one you compare with do impact, hence, you might need to use a bit commen sense here. Change PREssure_OFFSET accordingly in settings.
+
 ### SG estrimation by polynomial approach
 This software give an indicative SG with an offset of  +/- 2 SG untis if used in a airtight tank and an S-shaped airlock with 4 ml water in it!
 
 The SG is caclualted by we measure the SBM over time and this is re-cacluated in regards of SBM/pt/L by taken the pressure (p), temperature (t) and brew sieze into account (L), and hence this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
 
- <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/data.png">
+ <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/data2.png">
 
 If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger with a standard error of the mean of +/- 2 SG units:
 
@@ -182,7 +185,7 @@ The Atmospheric pressure do impact on the amount of bubbles in the sense 50% mor
 
 This turns for instance at very low pressure of 995 hPa: 1-((1015-995)/60)=Y <=> Y= 0.666, and this factor is then used to re-calculate the SBM/L into SBM/p/L to compresate for the release of CO2 at low Atmospheric pressure.
 
-The temperature also impacts on the acivity of gasses, and hence at lower temperature the gas is not moving as fast and therefore the bubbles rate is lower at a lager og 10`c vs. an ale of 20´C. So the temperature plays agains the low pressure, and final formel for temoerature and pressure, called PT-factor is:
+The temperature also impacts on the acivity of gasses, and hence at lower temperature the gas is not moving as fast and therefore the bubbles rate is lower at Pilsner temperature of 10`c vs. an ale of 20´C. So to acount for less acivity at lower temeprature the following fomalar is used (20´C is used as baseline):
 
 PT-faktor => 1-((1015-x)/60))*(TEMP/20)
 
