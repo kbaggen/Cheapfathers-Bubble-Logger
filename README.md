@@ -99,9 +99,9 @@ The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the fo
   <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/you%20brew.png">
 </p>
 
-Based on the data you can create a Dashboard and graphs whit your data as the various Dashboards above (is from Ubidtos STEM) and below (Ubidots EDUCATION) shows.
+Based on the data you can create a Dashboard and graphs whit your data as the various Dashboards pictures I show ant the tope and end of this page (the one from above is from Ubidtos STEM and below is from Ubidots EDUCATION).
 
-To have Temperature control, you need to add to Dashboard (where you most likely also wish to add the above average SBM and SG as a graph), a "Control/Slider/Settemp" widget of the range of your chosen temperature range (10-30C)! It should be noted the script do not support values below 1´C and turn over to a backup system if values below 1 is set. This is to secure the temperature system don’t go down if connection till "Ubidots Education" is lost (if no connection a value of 0 or below is read and posted by the logger/Ubidtos).
+To have Temperature control, you need to add to Dashboard (where you most likely also wish to add the SBM and SG as graphs), a "Control/Slider/Settemp" widget of the range of your chosen temperature range (10-30C)! It should be noted the script do not support values below 1´C and turn over to a backup system if values below 1 is set. This is to secure the temperature system don’t go down if connection till "Ubidots" is lost (if no connection a value of 0 or below is read and posted by the logger/Ubidtos).
 
 ## Calibration 
 ### Calibration of Sound Sensor Detecting Module LM393
