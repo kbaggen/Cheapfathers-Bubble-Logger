@@ -45,7 +45,7 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 1. Sound Sensor Detecting Module LM393.
 2. ds18b20  + resistor (4,7K ohm).
 3. NodeMCU.
-4. BDM280 pressure model.
+4. BDM280 pressure sensor.
 5. Wires!
 6. Optional - One small single-channel relay, needed of you wish to control temeprature.
 
@@ -54,7 +54,7 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 Temp probe (ds18b20) is on D4/pin2, the Sound Sensor Detecting Module LM393 is on Pin D5/Pin14 and Relay on D7/Pin 13. BDM280 is on SCL and SDA. (Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity).
  
  <p align="center">
-  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram1.png">
+  <img width="556" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram2.png">
 </p>
  
 ## Setup
@@ -74,6 +74,7 @@ The settings you need to update is the following:
 #define PASSWORD "YOUR pass"                                                                // Put here your Wi-Fi password               
 char my_polynominal[100] = "(-0.0000004*sum^2)-(0.009*sum)";                              // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                     // Offset temperature of ds18b20 sensor
+double Pressure_OFFSET = 5                                                                  // Ofset presure, check, you pressure on internet nearby!
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
 #define DEVICE  "Tester"                                                                 // Name of brew, whatever
 double START_TEMP = 20;                                                                     // Start temperature
@@ -86,7 +87,7 @@ Please ntoice the Punctuation Marks (") and where they are not, as this is impor
 
 
 ### Using Ubidot
-The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the following till Ubidots "temp", "settemp", "SBM", and the current "SBM_sum_pt_L" of SBM. The script push data every second minute.
+The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the following till Ubidots "SG", "temp", "settemp", "SBM", and the current "SBM_sum_pt_L" of SBM. The script push data every second minute.
 
  <p align="center">
   <img width="655" height="445" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/you%20brew.png">
