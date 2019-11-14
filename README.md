@@ -39,6 +39,7 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
   - A airtight Blow-off system is needed if you use low headspace, 
   - Or,  a high headspace of 33% together with a low temperature and hence a slow fermentation can also overcome the issue!
 * All calculations is based on precise amounts of wort, hence, keep eye on you amounts in Liters.
+* The logger psot to ubidots every 2 minutes, and as mssing SBM post will influrence on precision of SG estrimation, you need good/steedy WiFi. 
 * This equipment do make use of Arduino IDE, and hence, you need to be familiar with Arduino IDE or willing to learn!!!
 
 
