@@ -90,7 +90,7 @@ If you wish to dig into the data a bit more see below link where it can be seen 
 
 ***So, if a keen eye on placement/alingment of sound probe, 4ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
 
-You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same is likley needed if you change sound sensor.
+You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/pt/L and update your polynomial. The same is likley needed if you change sound sensor.
 
 All used data can be seen here: https://1drv.ms/x/s!An5QQQ1io7W7icIIRECfkWO0aTP8-Q?e=b4ph5j
 
