@@ -59,7 +59,7 @@ Besides a NodeMCU and some double female til female wires to connect it all:
 (Remember to make the wires sufficiently long for sound senor and temp probe, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity. The BMP280 pressure sensor is just placed together with NodeMCU in some kind of box you may have floating around).
  
 ## Theory behind this project
-What we meassure is as said the Sound Blops (Min) comming when CO2 is released, se.g. SBM, and if we lok  at the chemistry behind the metabolisms of fermentation of sugar by yeast cells, we see one part Alcohol generate one part CO2. Hence, CO2 is a direct emasument of the alcohol production. The key issue is to measument this gas accuarate and precise. Hence, the need of seals airtight tanks.
+What we meassure is as said the Sound Blops pr. Min comming when CO2 is released, se.g. SBM, and if we lok  at the chemistry behind the metabolisms of fermentation of sugar by yeast cells, we see one part Alcohol generate one part CO2. Hence, CO2 is a direct emasument of the alcohol production. The key issue is to measument this gas accuarate and precise. Hence, the need of seals airtight tanks.
 
                    C6H12O6    ====>   2(CH3CH2OH)      +        2(CO2)         (+Energy)
                     Sugar     ====>    Alcohol         +    Carbon dioxide gas (+Energy)
