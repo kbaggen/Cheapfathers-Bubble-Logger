@@ -139,7 +139,7 @@ double OG = 1049 ;                                                              
           // main loop every 2 mins
           
           // claculating P_faktor (pressure factor) as Atmospheric pressure impact on Bubble rate amount
-            double P_faktor;
+            double PT_faktor;
 
  
                   double Pressure =   PRESSURE_OFFSET + (bmp.readPressure()/100);  // the 100 to get fron Pa tll hPa.
@@ -147,7 +147,7 @@ double OG = 1049 ;                                                              
                   Serial.print(Pressure);
                   Serial.println(" hPa");
                   
-                  P_faktor = 1-((1015-Pressure)/60); // Function for taking pressure impact on bubble rate into account.
+                  PT_faktor = 1-((1015-Pressure)/60)*TEMP/20); // Function for taking pressure and temperature impact on bubble rate into account.
                   
           // Recalulating Bubbles over 2 min till SBM (sound-bubbles/min) and calculate SBM sum. If bubbles over 300 SBM disregarded as error!
               double SBM;
@@ -204,8 +204,8 @@ double OG = 1049 ;                                                              
 
               
            // printing data serial 
-              Serial.print(F("  P-faktor = "));
-              Serial.print(P_faktor);  
+              Serial.print(F("  PT-faktor = "));
+              Serial.print(PT_faktor);  
               Serial.print(F("  SG = "));
               Serial.print(SG);
               Serial.print("  ");
