@@ -75,7 +75,7 @@ This turns for instance at very low pressure of 995 hPa: 1-((1015-995)/60)=Y <=>
 
 The temperature also impacts on the acivity of gasses, and hence at lower temperature the gas is not moving as fast and therefore the bubbles rate is lower at Pilsner temperature of 10`c vs. an ale of 20´C. So to acount for less acivity at lower temeprature the following fomalar is used (20´C is used as baseline):
 
-PT-faktor => 1-((1015-x)/60))*(TEMP/20)
+PT-faktor => 1-((1015-x)/60))*(TEMP/20), 
 hence, we get SBM/pt/L from the intinial SBM measument by addition with the PT-faktor.
 
 ### SG estrimation by polynomial approach
