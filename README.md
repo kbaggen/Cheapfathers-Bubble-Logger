@@ -59,7 +59,7 @@ Besides a NodeMCU and some double female til female wires to connect it all:
 (Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity).
  
 ## Setup
-1. Get a Ubibots for education account!
+1. Get a Ubibots STEM account!
 2. Install Arduino IDE 
    - install EXP8266 boards! Se "http://arduino.esp8266.com/Arduino/versions/2.0.0/doc/installing.html"
    - Download "dependencies.zip" (se above folders) and extract the content into Arduino libraries folder so all the various folders of zip-file is kept (e.g. varoius folders stored into C:\Users\xxxxxx\Documents\Arduino\libraries\xxxxxx).
