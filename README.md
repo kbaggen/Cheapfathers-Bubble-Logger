@@ -56,7 +56,7 @@ Besides a NodeMCU and some double female til female wires to connect it all:
 <p align="center">
   <img width="556" height="646" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/diagram2.png">
 </p>
-(Remember to make the wires sufficiently long to, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity).
+(Remember to make the wires sufficiently long for sound senor and temp probe, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity. The BMP280 pressure sensor is just placed together with NodeMCU in some kind of box you may have floating around).
  
 ## Setup
 1. Get a Ubibots STEM account!
