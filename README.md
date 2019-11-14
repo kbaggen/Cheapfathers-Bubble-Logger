@@ -58,6 +58,40 @@ Besides a NodeMCU and some double female til female wires to connect it all:
 </p>
 (Remember to make the wires sufficiently long for sound senor and temp probe, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity. The BMP280 pressure sensor is just placed together with NodeMCU in some kind of box you may have floating around).
  
+## Theory behind this project
+What we meassure is as told above itroduction the Sound blops comming when CO2 is released by each minute (SBM), and if we lok  at the chemistry behind the metabolisms of fermentation of sugar by yeast cells, we see obe part Alcohol generate one part CO2. Hence, CO2 is a direct emasument of the alcohol production. The key issue is to measument this gas accuarate and precise. Hence, the need of seals airtight tanks.
+
+                   C6H12O6    ====>   2(CH3CH2OH)      +        2(CO2)    +  Energy (which is stored in ATP)
+                     Sugar      ====>       Alcohol             +   Carbon dioxide gas + Energy
+
+### Atmospheric pressure + Temperature and SBM - Indirectly impacting SG
+The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, or the density of gasses in each bubbles is less. This can be handled by calculating if you know the pressure, hence the BDM280 sensor! What I do is I have set 1015 hPa as my baseline as this is the geomean pressure in Denmark, furthermore at the very high the pressure is 1040, and at  the very low 980 hPa, giving a range of 60 hPa. Hence, to account for the pressure-range over the year I use:
+
+1-((1015-x)/60)), where X is the pressure at the giving time!
+
+This turns for instance at very low pressure of 995 hPa: 1-((1015-995)/60)=Y <=> Y= 0.666, and this factor is then used to re-calculate the SBM/L into SBM/p/L to compresate for the release of CO2 at low Atmospheric pressure.
+
+The temperature also impacts on the acivity of gasses, and hence at lower temperature the gas is not moving as fast and therefore the bubbles rate is lower at Pilsner temperature of 10`c vs. an ale of 20´C. So to acount for less acivity at lower temeprature the following fomalar is used (20´C is used as baseline):
+
+PT-faktor => 1-((1015-x)/60))*(TEMP/20)
+
+### SG estrimation by polynomial approach
+This software give an indicative SG with an offset of  +/- 2 SG untis if used in a airtight tank and an S-shaped airlock with 4 ml water in it!
+
+The SG is caclualted by we measure the SBM over time and this is re-cacluated in regards of SBM/pt/L by taken the pressure (p), temperature (t) and brew sieze into account (L), and hence this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
+
+ <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/data2.png">
+
+If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger with a standard error of the mean of +/- 2 SG units:
+
+ <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/mean_data.png">
+
+***So, if a keen eye on placement/alingment of sound probe, 4ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
+
+You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same is likley needed if you change sound sensor.
+
+All used data can be seen here: https://1drv.ms/x/s!An5QQQ1io7W7icIIRECfkWO0aTP8-Q?e=b4ph5j
+
 ## Setup
 1. Get a Ubibots STEM account!
 2. Install Arduino IDE 
@@ -163,39 +197,11 @@ It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no a
 ### Calibration of BDM280 pressure sensor
 Check the pressure in a serial monitor of Arduino IDE and if it is as mine was 5 hPA off (to the one you compare with on internet as nearby to you). The altitude of you location vs. the one you compare with do impact, hence, you might need to use a bit commen sense here. Change PREssure_OFFSET accordingly in settings.
 
-### Atmospheric pressure + Temperature and SBM - Indirectly impacting SG
-The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, or the density of gasses in each bubbles is less. This can be handled by calculating if you know the pressure, hence the BDM280 sensor! What I do is I have set 1015 hPa as my baseline as this is the geomean pressure in Denmark, furthermore at the very high the pressure is 1040, and at  the very low 980 hPa, giving a range of 60 hPa. Hence, to account for the pressure-range over the year I use:
 
-1-((1015-x)/60)), where X is the pressure at the giving time!
-
-This turns for instance at very low pressure of 995 hPa: 1-((1015-995)/60)=Y <=> Y= 0.666, and this factor is then used to re-calculate the SBM/L into SBM/p/L to compresate for the release of CO2 at low Atmospheric pressure.
-
-The temperature also impacts on the acivity of gasses, and hence at lower temperature the gas is not moving as fast and therefore the bubbles rate is lower at Pilsner temperature of 10`c vs. an ale of 20´C. So to acount for less acivity at lower temeprature the following fomalar is used (20´C is used as baseline):
-
-PT-faktor => 1-((1015-x)/60))*(TEMP/20)
-
-### SG estrimation by polynomial approach
-This software give an indicative SG with an offset of  +/- 2 SG untis if used in a airtight tank and an S-shaped airlock with 4 ml water in it!
-
-The SG is caclualted by we measure the SBM over time and this is re-cacluated in regards of SBM/pt/L by taken the pressure (p), temperature (t) and brew sieze into account (L), and hence this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
-
- <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/data2.png">
-
-If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger with a standard error of the mean of +/- 2 SG units:
-
- <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/mean_data.png">
-
-***So, if a keen eye on placement/alingment of sound probe, 4ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
-
-You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/L and update your polynomial. The same is likley needed if you change sound sensor.
-
-All used data can be seen here: https://1drv.ms/x/s!An5QQQ1io7W7icIIRECfkWO0aTP8-Q?e=b4ph5j
-
-
-### Facebook group (if any questions)
+## Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
 
-### Brews with SG
+## Brews with SG
 <p align="center">
   <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/RawWeiss.png">
 </p>
@@ -212,7 +218,7 @@ https://www.facebook.com/groups/2176394599141882/
   <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/SW_clone.png">
 </p>
 
-### Other brews
+## Other brews
 <p align="center">
   <img width="855" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/intro.png">
 </p>
