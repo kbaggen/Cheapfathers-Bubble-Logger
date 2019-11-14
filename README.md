@@ -59,12 +59,12 @@ Besides a NodeMCU and some double female til female wires to connect it all:
 (Remember to make the wires sufficiently long for sound senor and temp probe, e.g. to be able to have the logger outside fridge and sensor inside if your fridge is of metal or otherwise bad conectivity. The BMP280 pressure sensor is just placed together with NodeMCU in some kind of box you may have floating around).
  
 ## Theory behind this project
-What we meassure is as said the Sound Blops pr. Min comming when CO2 is released, se.g. SBM, and if we lok  at the chemistry behind the metabolisms of fermentation of sugar by yeast cells, we see one part Alcohol generate one part CO2. Hence, CO2 is a direct emasument of the alcohol production. The key issue is to measument this gas accuarate and precise. Hence, the need of seals airtight tanks.
+What we meassure is as said the Sound Blops pr. Min comming when CO2 is released, se.g. SBM, and if we look  at the chemistry behind the metabolisms of fermentation of sugar by yeast cells, we see one part Alcohol generate one part CO2. Hence, CO2 is a direct measument of the alcohol production. The key issue is to measument this gas accuarate and precise. Hence, the need of sealed airtight tanks.
 
                    C6H12O6    ====>   2(CH3CH2OH)      +        2(CO2)         (+Energy)
                     Sugar     ====>    Alcohol         +    Carbon dioxide gas (+Energy)
 
-Hence, by knwing he SBM and brew sieze (L) and other involving constants like pessure (p) and temperature (t) we can plot a curve of SBM/pt/L vs. the reduction in Gravity and generate a model or polynomial for the alcohol production based on Sound Blops pr. Min (SBM), se more below. 
+Hence, by knwing he SBM and brew sieze (L) and other involving constants like pessure (p) and temperature (t) we can plot a curve of SBM/pt/L vs. the reduction in Gravity and generate a model or polynomial for the alcohol production based on our initial measument of Sound Blops pr. Min (SBM), se more below. 
 
 ### Atmospheric pressure + Temperature and SBM - Indirectly impacting SG
 The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, or the density of gasses in each bubbles is less. This can be handled by calculating if you know the pressure, hence the BDM280 sensor! What I do is I have set 1015 hPa as my baseline as this is the geomean pressure in Denmark, furthermore at the very high the pressure is 1040, and at  the very low 980 hPa, giving a range of 60 hPa. Hence, to account for the pressure-range over the year I use:
