@@ -155,7 +155,7 @@ double OG = 1049 ;                                                              
                   Serial.print(Pressure);
                   Serial.println(" hPa");
                   
-                  PT_faktor = 1-((1015-Pressure)/60)*(temp/20); // Function for taking pressure impact on bubble rate into account.
+                  PT_faktor = 1-(((1015-Pressure)/60)*(temp/20)); // Function for taking pressure impact on bubble rate into account.
                   
           // Recalulating Bubbles over 2 min till SBM (sound-bubbles/min) and calculate SBM sum. If bubbles over 300 SBM disregarded as error!
               double SBM;
