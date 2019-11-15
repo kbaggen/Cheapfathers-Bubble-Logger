@@ -20,10 +20,10 @@
   
 
 //............ Settings/SETUP - PLEASE CHANGE accordingly............................
-#define TOKEN  "BBFF-MRNiuGCMCq4sWWsxFl6yci4g8KiL17"                                          // Put here your Ubidots TOKEN  
-#define WIFISSID "HomeBox-74C0_2.4G"                                                          // Put here your Wi-Fi SSID                     
-#define PASSWORD "93c24eacf"                                                                  // Put here your Wi-Fi password                            
-char my_polynominal[100] = "(-0.0000004*sum^2)+(0.0089*sum)";                                 // Inset your polnominal if calibrated, sum = SBM/L
+#define TOKEN  "Your Token"                                                                   // Put here your Ubidots TOKEN  
+#define WIFISSID "SSID"                                                                       // Put here your Wi-Fi SSID                     
+#define PASSWORD "You Pass"                                                                  // Put here your Wi-Fi password                            
+char my_polynominal[100] = "(-0.0000004*sum^2)+(0.009*sum)";                                 // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                       // Offset temperature of ds18b20 sensor
 double PRESSURE_OFFSET = 5;                                                                   // Offset Pressure of BMP280 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
