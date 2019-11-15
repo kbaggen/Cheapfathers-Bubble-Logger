@@ -27,7 +27,7 @@ char my_polynominal[100] = "(-0.0000004*sum^2)+(0.009*sum)";                    
 double TEMP_OFFSET = 0;                                                                       // Offset temperature of ds18b20 sensor
 double PRESSURE_OFFSET = 5;                                                                   // Offset Pressure of BMP280 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
-#define DEVICE  "Yoga_Pils"                                                                        // Name of brew, whatever
+#define DEVICE  "Your Brew"                                                                        // Name of brew, whatever
 double START_TEMP = 10;                                                                       // Start temperature
 double brewsize = 23;                                                                         // The sieze of you brew in liters
 double OG = 1049 ;                                                                             // Your start gravity, OG                                               
