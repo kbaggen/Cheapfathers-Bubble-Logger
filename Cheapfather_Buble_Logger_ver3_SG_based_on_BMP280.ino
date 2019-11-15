@@ -23,11 +23,11 @@
 #define TOKEN  "Your Token"                                          // Put here your Ubidots TOKEN  
 #define WIFISSID "Your SSID"                                                          // Put here your Wi-Fi SSID                     
 #define PASSWORD "Your pass"                                                                  // Put here your Wi-Fi password                            
-char my_polynominal[100] = "(-0.0000004*sum^2)+(0.0089*sum)";                                 // Inset your polnominal if calibrated, sum = SBM/L
+char my_polynominal[100] = "(-0.0000004*sum^2)+(0.009*sum)";                                 // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                       // Offset temperature of ds18b20 sensor
 double PRESSURE_OFFSET = 5;                                                                   // Offset Pressure of BMP280 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
-#define DEVICE  "Yoga_Pils"                                                                        // Name of brew, whatever
+#define DEVICE  "YOUR brew"                                                                        // Name of brew, whatever
 double START_TEMP = 10;                                                                       // Start temperature
 double brewsize = 23;                                                                         // The sieze of you brew in liters
 double OG = 1049 ;                                                                             // Your start gravity, OG                                               
@@ -56,8 +56,8 @@ double OG = 1049 ;                                                              
   int sensorPin = 14; // select the input pin for the Sound detector 
   int sensorValue = 0; // variable to store the value coming from the sensor
   int bubbleCount = 0; // Count for bubbles (resets after sending)
-  #define VARIABLE_SBM_sum_p_L "SBM_sum_p_L"
-  double SBM_sum_p_L;
+  #define VARIABLE_SBM_sum_pt_L "SBM_sum_pt_L"
+  double SBM_sum_pt_L;
   
 
   // timer statements
@@ -153,15 +153,15 @@ double OG = 1049 ;                                                              
               double SBM;
             
 
-              double SBM_sum_p_L_GET;
+              double SBM_sum_pt_L_GET;
               
               if (bubbleCount <= 600){
                                    SBM = (bubbleCount/2);// change if longer than 2min
                                    }
               
-              SBM_sum_p_L_GET = client.getValueWithDevice(DEVICE, VARIABLE_SBM_sum_p_L);
-              if (SBM_sum_p_L_GET >= 0){
-                                   SBM_sum_p_L = (SBM_sum_p_L_GET + ((P_faktor*SBM*2)/brewsize)); // change 2 if longer than 2min  
+              SBM_sum_pt_L_GET = client.getValueWithDevice(DEVICE, VARIABLE_SBM_sum_pt_L);
+              if (SBM_sum_pt_L_GET >= 0){
+                                   SBM_sum_pt_L = (SBM_sum_pt_L_GET + ((P_faktor*SBM*2)/brewsize)); // change 2 if longer than 2min  
                                    }
               
           
@@ -181,7 +181,7 @@ double OG = 1049 ;                                                              
    
               float gravity = 0;
                 int err;
-                double _sum = SBM_sum_p_L;
+                double _sum = SBM_sum_pt_L;
                 te_variable vars[] = {{"sum", &_sum}};
       
                 te_expr *expr = te_compile(my_polynominal, vars, 1, &err);
@@ -216,8 +216,8 @@ double OG = 1049 ;                                                              
               Serial.print(F("  SBM = "));
               Serial.print(SBM);
         
-              Serial.print(F("  SBM_sum_p_L = "));
-              Serial.print(SBM_sum_p_L);
+              Serial.print(F("  SBM_sum_pt_L = "));
+              Serial.print(SBM_sum_pt_L);
                    
                  
              //temp_relay control and check if Ubidots is posting settemp value, else using Fallback/backup temp (last settemp over 0)!  
@@ -266,7 +266,7 @@ double OG = 1049 ;                                                              
        // Make a request to the endpoint with the bubble count, SBM_sum, powerload, gravity and temperature
                 client.add("Temperature", temp);
                 client.add("SBM", SBM);
-                client.add("SBM_sum_p_L", SBM_sum_p_L);
+                client.add("SBM_sum_pt_L", SBM_sum_pt_L);
                 client.add("Settemp", temp_set_for_relay);
                 client.add("SG", SG);
                 client.sendAll(true);
