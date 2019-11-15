@@ -103,7 +103,7 @@ double OG = 1049 ;                                                              
   Serial.println(F("BMP280 test"));
   
   if (!bmp.begin(0x76)) {  // if not working use 77 insteed
-    Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
+    Serial.println(F("Could not find a valid BMP280 sensor, check wiring and consider use adress 0x77 insteed!"));
     while (1);
   }
 
@@ -138,7 +138,7 @@ double OG = 1049 ;                                                              
                   
           // main loop every 2 mins
           
-          // claculating P_faktor (pressure factor) as Atmospheric pressure impact on Bubble rate amount
+          // claculating PT_faktor (pressure factor) as Atmospheric pressure and temperature impact on Bubble rate amount
             double PT_faktor;
 
  
@@ -149,7 +149,7 @@ double OG = 1049 ;                                                              
                   
                   PT_faktor = 1-((1015-Pressure)/60)*TEMP/20); // Function for taking pressure and temperature impact on bubble rate into account.
                   
-          // Recalulating Bubbles over 2 min till SBM (sound-bubbles/min) and calculate SBM sum. If bubbles over 300 SBM disregarded as error!
+          // Recalulating Bubbles over 2 min till SBM (sound-bubbles pr. min) and calculate SBM sum. If bubbles over 300 SBM disregarded as error!
               double SBM;
             
 
