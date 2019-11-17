@@ -45,7 +45,7 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 
  <p align="center">
   <img width="446" height="555" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/tank3.png">
-</p> Here is my 30L tank, wtih logger onside. Sensor in s-airlock. Sometimes I use a airtight blow-off system seen next to tank! My other tank standing on heating mat: "https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/tank1.jpg
+</p> Here is my 30L tank, wtih logger onside. Sensor in s-airlock. Sometimes I use a airtight blow-off system seen next to tank! My other 20L Braumeister Speidel tank standing on 30W heating mat: "https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/tank1.jpg
 
 
 ### Equipment - Wiring
