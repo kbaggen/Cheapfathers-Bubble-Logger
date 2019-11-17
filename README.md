@@ -44,9 +44,8 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
 
 
  <p align="center">
-  <img width="446" height="555" src="http://posebryg.bagge-nielsen.dk/wp-content/uploads/2019/05/59489491_10162219591400179_5222123827512737792_n.jpg">
-</p>
-
+  <img width="446" height="555" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/IMG_1108%20(2).JPG">
+</p> Here is my 30L tank, wtih logger onside. Sensor in s-airlock. Sometimes I use a airtight blow-off system seen next to tank! 
 
 ### Equipment - Wiring
 Besides a NodeMCU and some double female til female wires to connect it all:
