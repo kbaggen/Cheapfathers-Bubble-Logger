@@ -20,17 +20,17 @@
   
 
 //............ Settings/SETUP - PLEASE CHANGE accordingly............................
-#define TOKEN  "BBFF-MRNiuGCMCq4sWWsxFl6yci4g8KiL17"                                          // Put here your Ubidots TOKEN  
-#define WIFISSID "HomeBox-74C0_2.4G"                                                          // Put here your Wi-Fi SSID                     
-#define PASSWORD "93c24eacf"                                                                  // Put here your Wi-Fi password                            
-char my_polynominal[100] = "(-0.0000004*sum^2)+(0.009*sum)";                                 // Inset your polnominal if calibrated, sum = SBM/L
+#define TOKEN  "You token"                                                                    // Put here your Ubidots TOKEN  
+#define WIFISSID "Your SSID"                                                                  // Put here your Wi-Fi SSID                     
+#define PASSWORD "PASSword of yours"                                                          // Put here your Wi-Fi password                            
+char my_polynominal[100] = "(-0.0000004*sum^2)+(0.009*sum)";                                  // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                       // Offset temperature of ds18b20 sensor
 double PRESSURE_OFFSET = 5;                                                                   // Offset Pressure of BMP280 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
-#define DEVICE  "Your brew"                                                                        // Name of brew, whatever
+#define DEVICE  "Your brew"                                                                   // Name of brew, whatever
 double START_TEMP = 10;                                                                       // Start temperature
 double brewsize = 23;                                                                         // The sieze of you brew in liters
-double OG = 1049 ;                                                                             // Your start gravity, OG                                               
+double OG = 1049 ;                                                                            // Your start gravity, OG                                               
 //...................................................................................
 
 
@@ -40,7 +40,7 @@ double OG = 1049 ;                                                              
 #include <DallasTemperature.h>
 #include <OneWire.h>
 #include "UbidotsMicroESP8266.h"
-//#include <Arduino.h>
+
  
   
   bool DEBUG = true;
