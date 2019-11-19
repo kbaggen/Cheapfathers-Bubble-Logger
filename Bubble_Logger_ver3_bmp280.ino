@@ -1,7 +1,7 @@
   //..................................................................................
   //         "Cheapfather´s Bubble-Logger!"                                                                     
   //         Script by www.Cheapfather.com, Klaus Bagge Nielsen                       
-  //         Email: klaus"a"bagge-nielsen.dk, October 2019.                                                                  
+  //         Email: klaus"a"bagge-nielsen.dk, November 2019.                                                                  
   //
   //         Detection of Sound-Bubbles, Gravity calculation, Temperature,
   //         + setpoint temperature control of Relay with Fallback (hence, if Ubidots
@@ -20,14 +20,14 @@
   
 
 //............ Settings/SETUP - PLEASE CHANGE accordingly............................
-#define TOKEN  "Your Token"                                                                   // Put here your Ubidots TOKEN  
-#define WIFISSID "SSID"                                                                       // Put here your Wi-Fi SSID                     
-#define PASSWORD "You Pass"                                                                  // Put here your Wi-Fi password                            
+#define TOKEN  "BBFF-MRNiuGCMCq4sWWsxFl6yci4g8KiL17"                                          // Put here your Ubidots TOKEN  
+#define WIFISSID "HomeBox-74C0_2.4G"                                                          // Put here your Wi-Fi SSID                     
+#define PASSWORD "93c24eacf"                                                                  // Put here your Wi-Fi password                            
 char my_polynominal[100] = "(-0.0000004*sum^2)+(0.009*sum)";                                 // Inset your polnominal if calibrated, sum = SBM/L
 double TEMP_OFFSET = 0;                                                                       // Offset temperature of ds18b20 sensor
 double PRESSURE_OFFSET = 5;                                                                   // Offset Pressure of BMP280 sensor
 //.............BELOW NEED TO BE CHANGE BEFORE EACH BREW..............................
-#define DEVICE  "Your Brew"                                                                        // Name of brew, whatever
+#define DEVICE  "Your brew"                                                                        // Name of brew, whatever
 double START_TEMP = 10;                                                                       // Start temperature
 double brewsize = 23;                                                                         // The sieze of you brew in liters
 double OG = 1049 ;                                                                             // Your start gravity, OG                                               
@@ -40,7 +40,7 @@ double OG = 1049 ;                                                              
 #include <DallasTemperature.h>
 #include <OneWire.h>
 #include "UbidotsMicroESP8266.h"
-#include <Arduino.h>
+//#include <Arduino.h>
  
   
   bool DEBUG = true;
@@ -103,7 +103,7 @@ double OG = 1049 ;                                                              
   Serial.println(F("BMP280 test"));
   
   if (!bmp.begin(0x76)) {  // if not working use 77 insteed
-    Serial.println(F("Could not find a valid BMP280 sensor, check wiring!"));
+    Serial.println(F("Could not find a valid BMP280 sensor, check wiring, check to use adress 0x77!"));
     while (1);
   }
 
