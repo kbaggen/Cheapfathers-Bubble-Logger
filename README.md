@@ -1,7 +1,6 @@
 # Cheapfathers-Bubble-logger!
 A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise amount of water (4 ml)! 
 
-
 ### Introduction
 This project measure: 
 1. the Sound-bubbles as CO2 escape the fermenter by a digital Sound Sensor Detecting Module LM393
@@ -204,6 +203,9 @@ Check the pressure in a serial monitor of Arduino IDE and if it is as mine was 5
 
 ## Facebook group (if any questions)
 https://www.facebook.com/groups/2176394599141882/
+
+## Licens
+Free to use for all except if you vote Trump, Boris or Putin.
 
 ## Brews with SG
 <p align="center">
