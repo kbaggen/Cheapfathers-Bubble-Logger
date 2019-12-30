@@ -169,7 +169,7 @@ double OG = 1049 ;                                                              
               
               SBM_sum_pt_L_GET = client.getValueWithDevice(DEVICE, VARIABLE_SBM_sum_pt_L);
               if (SBM_sum_pt_L_GET >= 0){
-                                   SBM_sum_pt_L = (SBM_sum_pt_L_GET + ((PT_faktor*SBM*2)/brewsize)); // change 2 if longer than 2min  
+                                   SBM_sum_pt_L = SBM_sum_pt_L_GET + (PT_faktor*SBM*2)/brewsize); // change 2 if longer than 2min  
                                    }
               
           
