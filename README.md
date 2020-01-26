@@ -1,5 +1,5 @@
 # Cheapfathers-Bubble-logger!
-A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise amount of water (4 ml)! 
+A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise amount of water (4-4,5 ml)! 
 
 ### Introduction
 This project measure: 
@@ -89,7 +89,7 @@ If you wish to dig into the data a bit more see below link where it can be seen 
 
  <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/mean_data.png">
 
-***So, if a keen eye on placement/alingment of sound probe, 4ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
+***So, if a keen eye on placement/alingment of sound probe, 4-4,5 ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
 
 You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/pt/L and update your polynomial. The same is likley needed if you change sound sensor.
 
@@ -180,19 +180,21 @@ void loop() {
 
 This give a high resolution sensor there miss a few and also post some double bubbles. This calibration should give you between 50 and up till 100-150 SBM at high krausen depending on temperature/yeast/brew size (I brew in 14-25L amounts), etc! This setting is prone to high sounds,  but light talking, music, drier and washing machine is ok to have nearby! 
 
-***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4 ml. Secondly, take a picture of your LM393 potentiometer setting and the amount of water in airlock from brew to brew***
+***To be able to compare from brew to brew of SBM and hence make use of polynoium you should try to hold as many variable the same, e.g. same sensor from brew to brew and foremost have same amount of water in airlock (+ same kind of S-airlock). I use 4-4,5 ml. Secondly, ensurethe aligment of the probe is the same from brew to brew.
 
 A picture of the amount of water under pressure:
 <p align="center">
   <img width="190" height="265" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/water_airlock.jpg">
 </p>
 
-### Fitting the Condom - Water Balloon on the LM393 - fitting in Airlock
+### Fitting the Condom - Water Balloon on the LM393 - fitting in Airlock - Alginment
 The LM393 need a mosture protection, and this is done by a small water balloon, and it should be rather tight around the noose, but still loose as above pictures shows. It  needs to sit tight in the airlock making an seal to resticict any water from vaporiation. This restict the CO2 in getting out so to let the CO2 out please drill a small hole in the airlock! Align it so the mirc is place over the direct hole in the airlock, so the sesor get the direct sound "blup". 
  <p align="center">
   <img width="446" height="256" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/sensor_3pic.png">
  </p>
 As the sensor got some shapes edges there will flence the ballon and secondly as the mirc rather easily can break off, try steady the sensor by some tape as first picture shows!
+
+Besides the water amount of 4-4,5ml and the use of a clabribated censor the foremost important factor is the algiment of the probe, and it need to be pressed all the way down and algned directly over the tube part and hence get the direct rease of C02/sound. IF not fitted precisely you fastly loose 20-33% SBM and hence the SG estrimate goes wrong. 
 
 ### Calibration of ds18b20 temperature probe
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
