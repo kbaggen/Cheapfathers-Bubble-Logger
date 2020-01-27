@@ -194,7 +194,8 @@ The LM393 need a mosture protection, and this is done by a small water balloon, 
  </p>
 As the sensor got some shapes edges there will flence the ballon and secondly as the mirc rather easily can break off, try steady the sensor by some tape as first picture shows!
 
-Besides the water amount of 4-4,5ml and the use of a clabribated censor the foremost important factor is the algiment of the probe, and it need to be pressed all the way down and algned directly over the tube part and hence get the direct rease of C02/sound. IF not fitted precisely you fastly loose 20-33% SBM and hence the SG estrimate goes wrong. 
+
+Besides the water amount of 4-4,5ml and the use of a clabribated censor the foremost important factor is the algiment of the probe, and it need to be pressed all the way down in the s-airlock and aliged directly over the tube-hole and hence get the direct release of C02 sound/pressure-burst. IF not fitted precisely you fastly loose 20-33% SBM and hence the SG estrimate goes wrong. 
 
 ### Calibration of ds18b20 temperature probe
 It should be noted that he cheap ds18b20 probes even rated at +/- 0.5`C, is no anywhere near that, so check you probe in boiling water and also ice bath (e.g. the crushed ice and water amount should be around 1:1), and inset the correction at TEMP_OFFSET in the setting in the Arduino.ino file!  
