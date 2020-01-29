@@ -27,7 +27,6 @@ Brooklyn Lager Clone:
 </p>
 (other pictures of brews in the end)
 
-<iframe width="100%" height="1041" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/UNIAg2xdtiLaNwiQBwvY5INSD4Y?embed=true"></iframe>
 
 ### Project outcome 
 Hence, the goal is to have a temperature logger/controller, one tiny device to take care of measurement of fermentation rate, e.g. showing Acivity as CO2 "Sound-bubbles pr Minute" (SBM) and a same time control the temperature at one setpoint! Secondly, to give an indicative SG estrimate with a offset of +/- 2 SG units. The idea is to get one device instead of having both a temperature controller and fermentation-rate logger at a very low price, e.g. 10$ or EUR! Secondly, the idea is also to remove a lot of soldering (e.g. Ispindel) and to get away from placing anything in the tank (e.g. Ispindel/Tilt). In some sense this is a DIY Plaato.  
