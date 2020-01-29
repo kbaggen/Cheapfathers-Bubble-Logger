@@ -94,7 +94,7 @@ If you wish to dig into the data a bit more see below link where it can be seen 
 
 You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/pt/L and update your polynomial. The same is likley needed if you change sound sensor.
 
-All used data can be seen here: https://1drv.ms/x/s!An5QQQ1io7W7icIIRECfkWO0aTP8-Q?e=b4ph5j
+All used data can be seen here: https://1drv.ms/x/s!An5QQQ1io7W7isIyxx3VWLrF85TYZg?e=ZRLGzD
 
 ## Setup
 1. Get a Ubibots STEM account!
@@ -135,6 +135,8 @@ The Bubble-Logger script make a device at Ubidots of "YOUR name" and push the fo
 Based on the data you can create a Dashboard and graphs whit your data as the various Dashboards pictures I show ant the tope and end of this page (the one from above is from Ubidtos STEM and below is from Ubidots EDUCATION).
 
 To have Temperature control, you need to add to Dashboard (where you most likely also wish to add the SBM and SG as graphs), a "Control/Slider/Settemp" widget of the range of your chosen temperature range (10-30C)! It should be noted the script do not support values below 1´C and turn over to a backup system if values below 1 is set. This is to secure the temperature system don’t go down if connection till "Ubidots" is lost (if no connection a value of 0 or below is read and posted by the logger/Ubidtos).
+
+Please notice, Ubidots STERM allows to copy the Dashbaord and hence set it to other device very easily and as such you only need to set up your Dashboard once.
 
 ## Calibration 
 ### Calibration of Sound Sensor Detecting Module LM393
