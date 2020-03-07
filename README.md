@@ -1,4 +1,5 @@
 # UPDATE MARCH 2020 - I moved out of github, please go till www.bubble-logger.com
+# Secondly I moved on till Optical inferred sensor!
 
 # Cheapfathers-Bubble-logger!
 A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise amount of water (4-4,5 ml)! 
@@ -49,11 +50,6 @@ Hence, the goal is to have a temperature logger/controller, one tiny device to t
   <img width="446" height="555" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/tank3.png">
 </p> Here is my 30L tank, wtih logger onside. Sensor in s-airlock. Sometimes I use a airtight blow-off system seen next to tank! My other 20L Braumeister Speidel tank standing on 30W heating mat: "https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/tank1.jpg
 
-
-### Equipment - Wiring
-Besides a NodeMCU and some double female til female wires to connect it all:
- - Temp probe (ds18b20 + resistor (4,7K ohm)) is on D4/pin2. 
-  - Optinal - A single side Relay (D7/Pin 13). 
 
  
 ## Theory behind this project
