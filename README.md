@@ -1,3 +1,5 @@
+# UPDATE MARCH 2020 - I moved out of github, please go till www.bubble-logger.com
+
 # Cheapfathers-Bubble-logger!
 A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise amount of water (4-4,5 ml)! 
 
@@ -68,33 +70,17 @@ What we meassure is as said the Sound Blops pr. Min comming when CO2 is released
 Hence, by knowing the SBM and brew sieze (L) and other involving constants like pessure (p) and temperature (t) we can plot a curve of SBM/pt/L vs. the reduction in Gravity and generate a model or polynomial for the alcohol production based on our initial measument of Sound Blops pr. Min (SBM), se more below. 
 
 ### Atmospheric pressure + Temperature and SBM - Indirectly impacting SG
-The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, or the density of gasses in each bubbles is less. This can be handled by calculating if you know the pressure, hence the BDM280 sensor! What I do is I have set 1015 hPa as my baseline as this is the geomean pressure in Denmark, furthermore at the very high the pressure is 1040, and at  the very low 980 hPa, giving a range of 60 hPa. Hence, to account for the pressure-range over the year I use:
+The Atmospheric pressure do impact on the amount of bubbles in the sense 50% more bubbles can be seen at very low pressure! My assuption is the bubbles is of lower size, and hence the release of CO2 is not higher, we just see more tiny bubbles so to speak, or the density of gasses in each bubbles is less. 
 
-P-faktor => 1-((1015-x)/60)), where X is the pressure at the giving time!
-
-This turns for instance at very low pressure of 995 hPa: 1-((1015-995)/60)=Y <=> Y= 0.666, and this factor is then used to re-calculate the SBM/L into SBM/p/L to compresate for the release of CO2 at low Atmospheric pressure.
 
 The temperature also impacts on the acivity of gasses, and hence at lower temperature the gas is not moving as fast and therefore the bubbles rate is lower at Pilsner temperature of 10`c vs. an ale of 20´C. So to acount for less acivity at lower temeprature the following fomalar is used (20´C is used as baseline):
 
-PT-faktor => 1-((1015-x)/60))*(TEMP/20), 
-hence, we get SBM/pt/L from the intinial SBM measument by addition with the PT-faktor.
+
 
 ### SG estrimation by polynomial approach
 This software give an indicative SG with an offset of  +/- 2 SG untis if used in a airtight tank and an S-shaped airlock with 4 ml water in it!
 
 The SG is caclualted by we measure the SBM over time and this is re-cacluated in regards of SBM/pt/L by taken the pressure (p), temperature (t) and brew sieze into account (L), and hence this is used by the polynoimal to calcualte the SG though a second degree polynoimal.
-
- <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/data2.png">
-
-If you wish to dig into the data a bit more see below link where it can be seen the last 9 brews where I used my logger with a standard error of the mean of +/- 2 SG units:
-
- <img width="656" height="446" src="https://github.com/kbaggen/Cheapfathers-Bubble-Logger/blob/master/pic/mean_data.png">
-
-***So, if a keen eye on placement/alingment of sound probe, 4-4,5 ml water amount in s-arilock and a slow/controlled fermentation in a airtight fermenter and the use of the same calibrated sensor, it is possible to use CO2 as a SG measument though a 2nd degree poly.*** 
-
-You might have to re-calculate you own polynomial based on your sound sensor and its calibration. Hence, make 2-3 brews and take hydrometer measuments over the time compared to SBM/pt/L and update your polynomial. The same is likley needed if you change sound sensor.
-
-All used data can be seen here: https://1drv.ms/x/s!An5QQQ1io7W7isIyxx3VWLrF85TYZg?e=ZRLGzD
 
 ## Setup
 1. Get a Ubibots STEM account!
