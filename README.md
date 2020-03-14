@@ -1,5 +1,4 @@
 # UPDATE MARCH 2020 - I moved out of github, please go till www.bubble-logger.com
-# Secondly I moved on till Optical inferred sensor!
 
 # Cheapfathers-Bubble-logger!
 A ferment Logger/controller, measuring "Temperature and Sound detection of CO2 bubbles" for NodeMCU (ESP8266). The software give an indicative SG estrimate based on S-airlock is used with a precise amount of water (4-4,5 ml)! 
